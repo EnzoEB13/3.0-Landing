@@ -1,14 +1,17 @@
-import React, { useEffect } from "react";
+import react, { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import FotoCentroAlta from "../assets/img/foto2.jpeg"
 import FotoCentro12 from "../assets/img/centro12.webp"
 import FotoCentroc5 from "../assets/img/centroc5.webp"
 import FotoCentroVilla from "../assets/img/centrovilla.webp"
-import fotoFurgon from "../assets/img/Furgon2.png"
+import fotoFurgon from "../assets/img/Furgon.png"
 import fotoDistribuidores from "../assets/img/distribuidores.png"
 import fotoNTF from "../assets/img/ntf.png"
-
+import fotoStreaming from "../assets/img/Streamings.png"
+import logoNutrifor from "../assets/img/logoNutrifor.jpg"
+import logoPanDeCasa from  "../assets/img/logoPanDeCasa.jpg"
+import logoRefsaGas from "../assets/img/logoRefsaGas.jpg"
 import portada from "../assets/img/portada.png"
 const Home = () => {
 
@@ -35,6 +38,23 @@ const Home = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+
+
+
+  const [modalAbierto, setModalAbierto] = useState(false);
+  const [imagenActual, setImagenActual] = useState(null);
+
+  const abrirModal = (img) => {
+    console.log("entro")
+    setImagenActual(img);
+    setModalAbierto(true);
+  };
+
+  const cerrarModal = () => {
+    setModalAbierto(false);
+    setImagenActual(null);
+  };
 
   return (
     <div>
@@ -74,7 +94,7 @@ const Home = () => {
 
         <main class="main">
             {/* <!-- Portada --> */}
-                <section id="hero" class="hero section dark-background">
+            <section id="hero" class="hero section dark-background">
                 <img src={`/src/assets/img/loginfondo.jpg`} alt="" class="hero-bg"/>
 
                 <div class="container">
@@ -112,7 +132,7 @@ const Home = () => {
                     </g>
                 </svg>
 
-                </section>
+            </section>
             {/* <!-- Fin Portada --> */}
 
             {/* <!-- Centros Fijos Section --> */}
@@ -185,98 +205,209 @@ const Home = () => {
             </section>
             {/* <!-- /Centros Fijos Section --> */}
 
-               {/*  <!-- Details Section --> */}
-    <section id="details" class="details section">
+            {/*  <!-- Details Section --> */}
+            <section id="details" class="details section">
 
-      {/* <!-- Section Title --> */}
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Sobre Nosotros</h2>
-        <div><span>TODO SOBRE</span> <span class="description-title">S.A.F</span></div>
-      </div>
-      {/* <!-- End Section Title --> */}
+              {/* <!-- Section Title --> */}
+              <div class="container section-title" data-aos="fade-up">
+                <h2>Sobre Nosotros</h2>
+                <div><span>TODO SOBRE</span> <span class="description-title">S.A.F</span></div>
+              </div>
+              {/* <!-- End Section Title --> */}
 
-      <div class="container">
+              <div class="container">
 
-        <div class="row gy-4 align-items-center features-item">
-          <div class="col-md-5 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="100">
-            <img src={fotoFurgon} class="img-fluid" alt=""/>
-          </div>
-          <div class="col-md-7" data-aos="fade-up" data-aos-delay="100">
-            <h3>¿Qué es el programa Soberanía Alimentaria Formoseña?</h3>
-            <p class="">
-                El <strong>programa Soberanía Alimentaria Formoseña</strong> o por sus siglas <strong>S.A.F </strong>
-                es un programa impulsado por la Subsecretaría de Defensa al Consumidor y Usuarios 
-                dependiente del Ministerio de Economía, Haciendas y Finanzas.
-                <br/><br/>Busca fortalecer y promocionar los canales de comercialización 
-                de los alimentos producidos por 
-                nuestras familias de productores paipperas, generando espacios de 
-                comercialización que permitan la venta directa del productor al 
-                consumidor eliminando la intermediación.
-            </p>
-            <ul>
-              <li><i class="bi bi-check"></i><span> Del productor a tu mesa a un precio justo.</span></li>
-            </ul>
-          </div>
-        </div>{/* <!-- Features Item --> */}
+                <div class="row gy-1 align-items-center features-item">
+                  <div class="col-md-5 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="100">
+                    <img src={fotoFurgon} class="img-fluid" alt=""/>
+                  </div>
+                  <div class="col-md-7" data-aos="fade-up" data-aos-delay="100">
+                    <h3>¿Qué es el programa Soberanía Alimentaria Formoseña?</h3>
+                    <p class="">
+                        El <strong>programa Soberanía Alimentaria Formoseña</strong> o por sus siglas <strong>S.A.F </strong>
+                        es un programa impulsado por la Subsecretaría de Defensa al Consumidor y Usuarios 
+                        dependiente del Ministerio de Economía, Haciendas y Finanzas.
+                        <br/><br/>Busca fortalecer y promocionar los canales de comercialización 
+                        de los alimentos producidos por 
+                        nuestras familias de productores paipperas, generando espacios de 
+                        comercialización que permitan la venta directa del productor al 
+                        consumidor eliminando la intermediación.
+                    </p>
+                    <ul>
+                      <li><i class="bi bi-check"></i><span> <strong>Del productor a tu mesa a un precio justo.</strong></span></li>
+                    </ul>
+                  </div>
+                </div>{/* <!-- Features Item --> */}
 
-        <div class="row gy-4 align-items-center features-item">
-          <div class="col-md-5 order-1 order-md-2 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
-            <img src={fotoDistribuidores} class="img-fluid" alt=""/>
-          </div>
-          <div class="col-md-7 order-2 order-md-1" data-aos="fade-up" data-aos-delay="200">
-            <h3>Nuestros productores locales</h3>
-            <p>
-              Los productores son familias locales de toda la provincia de Formosa, provenientes de comunidades como Riacho He-Hé, Tres Lagunas, Naineck, entre otros.
-            Además, trabajamos en conjunto con importantes distribuidores locales que fortalecen la cadena de valor, como:
-            </p>
-            <ul>
-              <li><i class="bi bi-check"></i><span> 🥖 PanDeCasa.</span></li>
-              <li><i class="bi bi-check"></i><span> 🔥 Refsa Gas</span></li>
-              <li><i class="bi bi-check"></i><span> 🥛 Nutrifor</span></li>
-            </ul>
-            <p class="fst-italic">Juntos garantizamos una red sólida de producción y distribución, siempre priorizando lo local.</p>
-          </div>
-        </div>{/* <!-- Features Item --> */}
+                <div class="row gy-1 align-items-center features-item">
+                  <div class="col-md-5 order-1 order-md-2 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
+                    <img src={fotoDistribuidores} class="img-fluid" alt=""/>
+                  </div>
+                  <div class="col-md-7 order-2 order-md-1" data-aos="fade-up" data-aos-delay="200">
+                    <h3>Nuestros productores locales</h3>
+                    <p>
+                      Los productores que forman parte de <strong>Soberanía Alimentaria Formoseña</strong> son, en su mayoría, 
+                      familias trabajadoras de diferentes puntos de la provincia, provenientes de comunidades 
+                      como <strong>Riacho He-Hé, Tres Lagunas, Naineck</strong> y muchas otras. 
+                      Ellos son el corazón de este programa, ya que con esfuerzo y dedicación cultivan, elaboran y 
+                      acercan alimentos frescos 
+                      y de calidad para todos los formoseños.
+                      <br/><br/>
+                      Además, trabajamos en conjunto con importantes distribuidores locales que fortalecen la cadena de valor, como:
+                    </p>
+                    <div class="icon-container-dis">
+                      <div class="icon-circle-dis">
+                        <img src={logoNutrifor} alt="icono" />
+                      </div>
+                      <div class="icon-circle-dis">
+                        <img src={logoPanDeCasa} alt="icono" />
+                      </div>
+                      <div class="icon-circle-dis">
+                        <img src={logoRefsaGas} alt="icono" />
+                      </div>
+                    </div>
 
-        <div class="row gy-4 align-items-center features-item">
-          <div class="col-md-5 d-flex align-items-center" data-aos="zoom-out">
-            <img src={fotoNTF} class="img-fluid" alt=""/>
-          </div>
-          <div class="col-md-7" data-aos="fade-up">
-            <h3>Comunicación y Comunidad</h3>
-            <p>
-              El programa también tiene un espacio en la televisión local a través de “Netamente Formoseño”, 
-              un ciclo que difunde el trabajo de nuestros productores, 
-              los avances del programa y consejos para los consumidores. <br/>
-              Además, <strong>S.A.F.</strong> recorre barrios y localidades, 
-              llevando alimentos frescos y saludables a miles de familias formoseñas.
-            </p>
-            <p class="fst-italic">Nuestro compromiso es con la soberanía alimentaria, el desarrollo local y el bienestar de nuestra gente.</p>
-            
-          </div>
-        </div>{/* <!-- Features Item --> */}
+                    <p class="fst-italic py-4"><strong>De esta forma, juntos construimos una red sólida de producción y 
+                      distribución, que siempre prioriza lo local y refuerza nuestra identidad formoseña.</strong></p>
+                  </div>
+                </div>{/* <!-- Features Item --> */}
 
-        <div class="row gy-4 align-items-center features-item">
-          <div class="col-md-5 order-1 order-md-2 d-flex align-items-center" data-aos="zoom-out">
-            <img src="assets/img/details-4.png" class="img-fluid" alt=""/>
-          </div>
-          <div class="col-md-7 order-2 order-md-1" data-aos="fade-up">
-            <h3>Quas et necessitatibus eaque impedit ipsum animi consequatur incidunt in</h3>
-            <p class="fst-italic">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
-            </p>
-            <p>
-              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-              velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-              culpa qui officia deserunt mollit anim id est laborum
-            </p>
-          </div>
-        </div>{/* <!-- Features Item --> */}
+                <div class="row gy-1 align-items-center features-item">
+                  <div class="col-md-5 d-flex align-items-center" data-aos="zoom-out">
+                    <img src={fotoNTF} class="img-fluid" alt=""/>
+                  </div>
+                  <div class="col-md-7" data-aos="fade-up">
+                    <h3>Comunicación y Comunidad</h3>
+                    <p>
+                      El programa también tiene un espacio en la televisión local a través de <strong>“Netamente Formoseño”</strong>, 
+                      un ciclo que difunde el trabajo de nuestros productores, 
+                      los avances del programa y consejos para los consumidores. <br/>
+                      Además, <strong>S.A.F.</strong> recorre barrios y localidades, 
+                      llevando alimentos frescos y saludables a miles de familias formoseñas.
+                    </p>
+                    <p class="fst-italic"><strong>Nuestro compromiso es con la soberanía alimentaria, el desarrollo local y el bienestar de nuestra gente.</strong></p>
+                    
+                  </div>
+                </div>{/* <!-- Features Item --> */}
 
-      </div>
+                <div class="row gy-1 align-items-center features-item">
+                  <div class="col-md-5 order-1 order-md-2 d-flex align-items-center" data-aos="zoom-out">
+                    <img src={fotoStreaming} class="img-fluid" alt=""/>
+                  </div>
+                  <div class="col-md-7 order-2 order-md-1" data-aos="fade-up">
+                    <h3>Streaming Nutricionales</h3>
+                    <p >
+                      Dentro del marco del programa <strong>Soberanía Alimentaria Formoseña</strong>, 
+                      se desarrollan los <strong>Streaming Nutricionales</strong>, un espacio pensado para brindar 
+                      a la comunidad información útil y accesible sobre la alimentación saludable.<br/>
+                      Cada transmisión busca orientar a las familias formoseñas con 
+                      consejos prácticos sobre qué alimentos consumir, cómo combinarlos 
+                      y de qué manera incorporarlos en la vida diaria para mejorar la calidad de vida.
+                    </p>
+                    <p>
+                      En estos encuentros virtuales también se comparten recetas nutritivas 
+                      y económicas, además de actividades y novedades relacionadas al programa SAF. 
+                      Los streamings funcionan como un puente directo entre productores, especialistas 
+                      en nutrición y consumidores, reforzando el lema 
+                      <strong class="fst-italic">“Del productor a tu mesa con un precio justo”</strong>, 
+                      pero también <strong class="fst-italic">“con conocimiento y salud para toda la familia”</strong>.
+                    </p>
+                  </div>
+                </div>{/* <!-- Features Item --> */}
+              </div>
+            </section>{/* <!-- /Details Section --> */}
 
-    </section>{/* <!-- /Details Section --> */}
+            {/* <!-- Gallery Section --> */}
+            <section id="gallery" class="gallery section">
+
+              {/* <!-- Section Title --> */}
+              <div class="container section-title" data-aos="fade-up">
+                <h2>S.A.F</h2>
+                <div><span>Galeria De </span> <span class="description-title">Fotos</span></div>
+              </div>{/* <!-- End Section Title --> */}
+
+              <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+                <div class="row g-0">
+
+                  <div class="col-lg-3 col-md-4">
+                    <div class="gallery-item">
+                      <div  onClick={() => abrirModal(FotoCentroAlta)}  class="glightbox" data-gallery="images-gallery">
+                        <img src={FotoCentroAlta} alt="" class="img-fluid"/>
+                      </div>
+                    </div>
+                  </div>{/* <!-- End Gallery Item --> */}
+
+                  <div class="col-lg-3 col-md-4">
+                    <div class="gallery-item">
+                      <div onClick={() => abrirModal(FotoCentroAlta)} class="glightbox" data-gallery="images-gallery">
+                        <img src={FotoCentroAlta} alt="" class="img-fluid"/>
+                      </div>
+                    </div>
+                  </div>{/* <!-- End Gallery Item --> */}
+
+                  <div class="col-lg-3 col-md-4">
+                    <div class="gallery-item">
+                      <div onClick={() => abrirModal(FotoCentroAlta)} class="glightbox" data-gallery="images-gallery">
+                        <img src={FotoCentroAlta} alt="" class="img-fluid"/>
+                      </div>
+                    </div>
+                  </div>{/* <!-- End Gallery Item --> */}
+
+                  <div class="col-lg-3 col-md-4">
+                    <div class="gallery-item">
+                      <div onClick={() => abrirModal(FotoCentroAlta)} class="glightbox" data-gallery="images-gallery">
+                        <img src={FotoCentroAlta} alt="" class="img-fluid"/>
+                      </div>
+                    </div>
+                  </div>{/* <!-- End Gallery Item --> */}
+
+                  <div class="col-lg-3 col-md-4">
+                    <div class="gallery-item">
+                      <div onClick={() => abrirModal(FotoCentroAlta)} class="glightbox" data-gallery="images-gallery">
+                        <img src={FotoCentroAlta} alt="" class="img-fluid"/>
+                      </div>
+                    </div>
+                  </div>{/* <!-- End Gallery Item --> */}
+
+                  <div class="col-lg-3 col-md-4">
+                    <div class="gallery-item">
+                      <div onClick={() => abrirModal(FotoCentroAlta)} class="glightbox" data-gallery="images-gallery">
+                        <img src={FotoCentroAlta} alt="" class="img-fluid"/>
+                      </div>
+                    </div>
+                  </div>{/* <!-- End Gallery Item --> */}
+
+                  <div class="col-lg-3 col-md-4">
+                    <div class="gallery-item">
+                      <div onClick={() => abrirModal(FotoCentroAlta)} class="glightbox" data-gallery="images-gallery">
+                        <img src={FotoCentroAlta} alt="" class="img-fluid"/>
+                      </div>
+                    </div>
+                  </div>{/* <!-- End Gallery Item --> */}
+
+                  <div class="col-lg-3 col-md-4">
+                    <div class="gallery-item">
+                      <div onClick={() => abrirModal(FotoCentroAlta)} class="glightbox" data-gallery="images-gallery">
+                        <img src={FotoCentroAlta} alt="" class="img-fluid"/>
+                      </div>
+                    </div>
+                  </div>{/* <!-- End Gallery Item --> */}
+
+                </div>
+
+              </div>
+
+            </section>
+            {/* <!-- /Gallery Section --> */}
+
+
+            {modalAbierto && (
+        <div className="modal-imagen" onClick={cerrarModal}>
+          <span className="cerrar-modal" onClick={cerrarModal}>×</span>
+          <img src={imagenActual} alt="Imagen en grande" className="imagen-modal" />
+        </div>
+      )}
 
         </main>
 
