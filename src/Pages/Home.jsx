@@ -13,6 +13,25 @@ import logoNutrifor from "../assets/img/logoNutrifor.jpg"
 import logoPanDeCasa from  "../assets/img/logoPanDeCasa.jpg"
 import logoRefsaGas from "../assets/img/logoRefsaGas.jpg"
 import portada from "../assets/img/portada.png"
+
+/* Galeria */
+import foto1 from "../assets/img/galeria/foto1.jpg"
+import foto2 from "../assets/img/galeria/foto2.jpg"
+import foto3 from "../assets/img/galeria/foto3.jpg"
+import foto4 from "../assets/img/galeria/foto4.jpg"
+import foto5 from "../assets/img/galeria/foto5.jpg"
+import foto6 from "../assets/img/galeria/foto6.jpg"
+import foto7 from "../assets/img/galeria/foto7.jpg"
+import foto8 from "../assets/img/galeria/foto8.jpg"
+import foto9 from "../assets/img/galeria/foto9.jpg"
+import foto10 from "../assets/img/galeria/foto10.jpg"
+import foto11 from "../assets/img/galeria/foto11.jpg"
+import foto12 from "../assets/img/galeria/foto12.jpg"
+import foto13 from "../assets/img/galeria/foto13.jpg"
+import foto14 from "../assets/img/galeria/foto14.jpg"
+import foto15 from "../assets/img/galeria/foto15.jpg"
+import foto16 from "../assets/img/galeria/foto16.jpg"
+/* Fin Galeria */
 const Home = () => {
 
     useEffect(() => {
@@ -332,64 +351,128 @@ const Home = () => {
 
                   <div class="col-lg-3 col-md-4">
                     <div class="gallery-item">
-                      <div  onClick={() => abrirModal(FotoCentroAlta)}  class="glightbox" data-gallery="images-gallery">
-                        <img src={FotoCentroAlta} alt="" class="img-fluid"/>
+                      <div  onClick={() => abrirModal(foto1)}  class="glightbox" data-gallery="images-gallery">
+                        <img src={foto1} alt="" class="img-fluid"/>
                       </div>
                     </div>
                   </div>{/* <!-- End Gallery Item --> */}
 
                   <div class="col-lg-3 col-md-4">
                     <div class="gallery-item">
-                      <div onClick={() => abrirModal(FotoCentroAlta)} class="glightbox" data-gallery="images-gallery">
-                        <img src={FotoCentroAlta} alt="" class="img-fluid"/>
+                      <div onClick={() => abrirModal(foto2)} class="glightbox" data-gallery="images-gallery">
+                        <img src={foto2} alt="" class="img-fluid"/>
                       </div>
                     </div>
                   </div>{/* <!-- End Gallery Item --> */}
 
                   <div class="col-lg-3 col-md-4">
                     <div class="gallery-item">
-                      <div onClick={() => abrirModal(FotoCentroAlta)} class="glightbox" data-gallery="images-gallery">
-                        <img src={FotoCentroAlta} alt="" class="img-fluid"/>
+                      <div onClick={() => abrirModal(foto3)} class="glightbox" data-gallery="images-gallery">
+                        <img src={foto3} alt="" class="img-fluid"/>
                       </div>
                     </div>
                   </div>{/* <!-- End Gallery Item --> */}
 
                   <div class="col-lg-3 col-md-4">
                     <div class="gallery-item">
-                      <div onClick={() => abrirModal(FotoCentroAlta)} class="glightbox" data-gallery="images-gallery">
-                        <img src={FotoCentroAlta} alt="" class="img-fluid"/>
+                      <div onClick={() => abrirModal(foto4)} class="glightbox" data-gallery="images-gallery">
+                        <img src={foto4} alt="" class="img-fluid"/>
                       </div>
                     </div>
                   </div>{/* <!-- End Gallery Item --> */}
 
                   <div class="col-lg-3 col-md-4">
                     <div class="gallery-item">
-                      <div onClick={() => abrirModal(FotoCentroAlta)} class="glightbox" data-gallery="images-gallery">
-                        <img src={FotoCentroAlta} alt="" class="img-fluid"/>
+                      <div onClick={() => abrirModal(foto5)} class="glightbox" data-gallery="images-gallery">
+                        <img src={foto5} alt="" class="img-fluid"/>
                       </div>
                     </div>
                   </div>{/* <!-- End Gallery Item --> */}
 
                   <div class="col-lg-3 col-md-4">
                     <div class="gallery-item">
-                      <div onClick={() => abrirModal(FotoCentroAlta)} class="glightbox" data-gallery="images-gallery">
-                        <img src={FotoCentroAlta} alt="" class="img-fluid"/>
+                      <div onClick={() => abrirModal(foto6)} class="glightbox" data-gallery="images-gallery">
+                        <img src={foto6} alt="" class="img-fluid"/>
                       </div>
                     </div>
                   </div>{/* <!-- End Gallery Item --> */}
 
                   <div class="col-lg-3 col-md-4">
                     <div class="gallery-item">
-                      <div onClick={() => abrirModal(FotoCentroAlta)} class="glightbox" data-gallery="images-gallery">
-                        <img src={FotoCentroAlta} alt="" class="img-fluid"/>
+                      <div onClick={() => abrirModal(foto7)} class="glightbox" data-gallery="images-gallery">
+                        <img src={foto7} alt="" class="img-fluid"/>
                       </div>
                     </div>
                   </div>{/* <!-- End Gallery Item --> */}
 
                   <div class="col-lg-3 col-md-4">
                     <div class="gallery-item">
-                      <div onClick={() => abrirModal(FotoCentroAlta)} class="glightbox" data-gallery="images-gallery">
-                        <img src={FotoCentroAlta} alt="" class="img-fluid"/>
+                      <div onClick={() => abrirModal(foto8)} class="glightbox" data-gallery="images-gallery">
+                        <img src={foto8} alt="" class="img-fluid"/>
+                      </div>
+                    </div>
+                  </div>{/* <!-- End Gallery Item --> */}
+
+                  <div class="col-lg-3 col-md-4">
+                    <div class="gallery-item">
+                      <div onClick={() => abrirModal(foto9)} class="glightbox" data-gallery="images-gallery">
+                        <img src={foto9} alt="" class="img-fluid"/>
+                      </div>
+                    </div>
+                  </div>{/* <!-- End Gallery Item --> */}
+
+                  <div class="col-lg-3 col-md-4">
+                    <div class="gallery-item">
+                      <div onClick={() => abrirModal(foto10)} class="glightbox" data-gallery="images-gallery">
+                        <img src={foto10} alt="" class="img-fluid"/>
+                      </div>
+                    </div>
+                  </div>{/* <!-- End Gallery Item --> */}
+
+                  <div class="col-lg-3 col-md-4">
+                    <div class="gallery-item">
+                      <div onClick={() => abrirModal(foto11)} class="glightbox" data-gallery="images-gallery">
+                        <img src={foto11} alt="" class="img-fluid"/>
+                      </div>
+                    </div>
+                  </div>{/* <!-- End Gallery Item --> */}
+
+                  <div class="col-lg-3 col-md-4">
+                    <div class="gallery-item">
+                      <div onClick={() => abrirModal(foto12)} class="glightbox" data-gallery="images-gallery">
+                        <img src={foto12} alt="" class="img-fluid"/>
+                      </div>
+                    </div>
+                  </div>{/* <!-- End Gallery Item --> */}
+
+                  <div class="col-lg-3 col-md-4">
+                    <div class="gallery-item">
+                      <div onClick={() => abrirModal(foto13)} class="glightbox" data-gallery="images-gallery">
+                        <img src={foto13} alt="" class="img-fluid"/>
+                      </div>
+                    </div>
+                  </div>{/* <!-- End Gallery Item --> */}
+
+                  <div class="col-lg-3 col-md-4">
+                    <div class="gallery-item">
+                      <div onClick={() => abrirModal(foto14)} class="glightbox" data-gallery="images-gallery">
+                        <img src={foto14} alt="" class="img-fluid"/>
+                      </div>
+                    </div>
+                  </div>{/* <!-- End Gallery Item --> */}
+
+                  <div class="col-lg-3 col-md-4">
+                    <div class="gallery-item">
+                      <div onClick={() => abrirModal(foto15)} class="glightbox" data-gallery="images-gallery">
+                        <img src={foto15} alt="" class="img-fluid"/>
+                      </div>
+                    </div>
+                  </div>{/* <!-- End Gallery Item --> */}
+
+                  <div class="col-lg-3 col-md-4">
+                    <div class="gallery-item">
+                      <div onClick={() => abrirModal(foto16)} class="glightbox" data-gallery="images-gallery">
+                        <img src={foto16} alt="" class="img-fluid"/>
                       </div>
                     </div>
                   </div>{/* <!-- End Gallery Item --> */}
