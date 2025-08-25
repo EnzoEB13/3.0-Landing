@@ -1,0 +1,43 @@
+.popupMapaDIV {
+  max-width: 250px;
+}
+
+.portadaMapaIMG {
+  width: 100%;
+  max-height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.TituloMapah2{
+    color: #035e8f;
+    text-align: center;       /* centra horizontalmente */
+    margin: 0 0 8px 0;        /* opcional: margen inferior */
+    font-size: 18px;          /* ajustar tamaño de fuente */
+    font-weight: bold;        /* opcional: negrita */
+}
+
+.barrioMapaP{
+  color: #035e8f;
+  text-align: center;       /* centra horizontalmente */
+  margin: 0 0 8px 0;        /* opcional: margen inferior */
+  font-size: 14px;          /* ajustar tamaño de fuente */
+  font-weight: bold;        /* opcional: negrita */
+}
+
+.descripcionMapaP{
+  text-align: center;       /* centra horizontalmente */
+  margin: 0 0 8px 0;        /* opcional: margen inferior */
+  font-size: 10px;          /* ajustar tamaño de fuente */
+  font-weight: bold;        /* opcional: negrita */
+}
+
+/* Marcador personalizado */
+.markerCustom {
+  width: 40px;
+  height: 40px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}

@@ -1,6 +1,59 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import logo from "../assets/img/favicon2.png"
+import { Link } from 'react-router-dom'
+import { useLocation } from 'react-router-dom';
 const NavBar = () => {
+  /* class={`${location.pathname = "" ? "active" : ""}`} */
+  const [nombreRuta, setNombreRuta] = useState("")
+  useEffect(()=>{
+    switch (location.pathname) {
+      case "/noticias":
+        setNombreRuta("noticias")
+        break;
+        case "/programas":
+        setNombreRuta("programas")
+        break;
+        case "/onda":
+        setNombreRuta("onda")
+        break;
+        case "/productores":
+        setNombreRuta("productores")
+        break;
+        case "/productos":
+        setNombreRuta("productos")
+        break;
+        case "/puntos":
+        setNombreRuta("puntos")
+        break;
+        case "/streamings":
+        setNombreRuta("streamings")
+        break;
+        case "/noticia":
+        setNombreRuta("noticias")
+        break;
+    default:
+      setNombreRuta("inicio")
+      break;
+  }
+  },[location.pathname])
+
+ /*  console.log(location.pathname) */
+useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        document.body.classList.add("scrolled");
+      } else {
+        document.body.classList.remove("scrolled");
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    // cleanup al desmontar
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
     <header id="header" class="header d-flex align-items-center fixed-top">
             <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
@@ -12,36 +65,36 @@ const NavBar = () => {
               <nav id="navmenu" class="navmenu">
                 <ul>
                   <li>
-                    <a href="#hero" class="active">
+                    <Link to="/" className={`${nombreRuta == "inicio" ? "active" : ""}`}>
                       Inicio
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="#about">Noticias</a>
+                    <Link to="/noticias" className={`${nombreRuta == "noticias" ? "active" : ""}`}>Noticias</Link>
                   </li>
                   <li>
-                    <a href="#features">Productos</a>
+                    <Link to="/productos" className={`${nombreRuta == "productos" ? "active" : ""}`}>Productos</Link>
                   </li>
                   <li>
-                    <a href="#gallery">Puntos</a>
+                    <Link to="/puntos" className={`${nombreRuta == "puntos" ? "active" : ""}`}>Puntos</Link>
                   </li>
                   <li>
-                    <a href="#team">Productores</a>
+                    <Link to="/productores" className={`${nombreRuta == "productores" ? "active" : ""}`}>Productores</Link>
                   </li>
                   <li>
-                    <a href="#pricing">ONDA</a>
+                    <Link to="/onda" className={`${nombreRuta == "onda" ? "active" : ""}`}>ONDA</Link>
                   </li>
                   <li class="dropdown">
-                    <a href="#">
+                    <a href="#" className={`${nombreRuta == "programas" || nombreRuta == "streamings" ? "active" : ""}`}>
                       <span>Programas</span>{" "}
                       <i class="bi bi-chevron-down toggle-dropdown"></i>
                     </a>
                     <ul>
                       <li>
-                        <a href="#">Streamings Nutricionales</a>
+                        <Link to="/streamings" >Streamings Nutricionales</Link>
                       </li>
                       <li>
-                        <a href="#">Netamente Formoseno</a>
+                        <Link to="/programas" >Netamente Formoseno</Link>
                       </li>
                     </ul>
                   </li>

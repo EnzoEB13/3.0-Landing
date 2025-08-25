@@ -80,6 +80,11 @@
 }
 
 
+.textoGenerales{
+    font-weight: bold;
+    color: #035e8f;
+}
+
 /* MODAL GALERIA */
 
 .modal-imagen {
@@ -853,7 +858,7 @@ section,
 }
 
 .section-title div {
-  color: var(--heading-color);
+  color: #035e8f;
   margin: 0;
   margin: 0;
   font-size: 28px;
@@ -1444,6 +1449,10 @@ section,
 .team .member .pic {
   overflow: hidden;
   margin-bottom: 50px;
+  width: 100%;
+  height: 270px;  /* ajustá el alto según necesites */
+  object-fit: cover; /* recorta la imagen manteniendo la proporción */
+  border-radius: 8px; /* opcional, bordes redondeados */
 }
 
 .team .member .member-info {
@@ -1504,6 +1513,81 @@ section,
   margin: 0 2px;
 }
 
+
+/*--------------------------------------------------------------
+# PRODUCTO Section
+--------------------------------------------------------------*/
+.team .member-productos {
+  position: relative;
+}
+
+.team .member-productos .pic-productos {
+  overflow: hidden;
+  margin-bottom: 50px;
+  width: 100%;
+  height: 320px;  /* ajustá el alto según necesites */
+  object-fit: cover; /* recorta la imagen manteniendo la proporción */
+  border-radius: 8px; /* opcional, bordes redondeados */
+}
+
+.team .member-productos .member-info-productos {
+  background-color: var(--surface-color);
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  bottom: -50px;
+  left: 20px;
+  right: 20px;
+  padding: 20px 15px;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.team .member-productos h4 {
+  font-weight: 700;
+  margin-bottom: 10px;
+  font-size: 16px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.team .member-productos h4::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 1px;
+  background: color-mix(in srgb, var(--default-color), transparent 60%);
+  bottom: 0;
+  left: 0;
+}
+
+.team .member-productos span {
+  font-style: italic;
+  display: block;
+  font-size: 17px;
+  color: #059652;
+}
+
+.team .member-productos .social {
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+}
+
+.team .member-productos .social a {
+  transition: color 0.3s;
+  color: color-mix(in srgb, var(--default-color), transparent 70%);
+}
+
+.team .member-productos .social a:hover {
+  color: var(--accent-color);
+}
+
+.team .member-productos .social i {
+  font-size: 16px;
+  margin: 0 2px;
+}
 /*--------------------------------------------------------------
 # Pricing Section
 --------------------------------------------------------------*/

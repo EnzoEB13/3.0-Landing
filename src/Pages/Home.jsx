@@ -53,22 +53,7 @@ const Home = () => {
     });
   }, []);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 50) {
-        document.body.classList.add("scrolled");
-      } else {
-        document.body.classList.remove("scrolled");
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    // cleanup al desmontar
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  
 
   const [modalAbierto, setModalAbierto] = useState(false);
   const [imagenActual, setImagenActual] = useState(null);
@@ -836,6 +821,10 @@ const Home = () => {
             />
           </div>
         )}
+
+        <div>
+          <hr/>
+        </div>
         <Footer/>
       </Container>
     
