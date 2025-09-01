@@ -7,7 +7,7 @@ const NavBar = () => {
 
   
 
-  /* class={`${location.pathname = "" ? "active" : ""}`} */
+  /* className={`${location.pathname = "" ? "active" : ""}`} */
   const [nombreRuta, setNombreRuta] = useState("")
   useEffect(()=>{
     switch (location.pathname) {
@@ -41,7 +41,7 @@ const NavBar = () => {
   }
   },[location.pathname])
 
- /*  console.log(location.pathname) */
+ 
 useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 50) {
@@ -59,14 +59,14 @@ useEffect(() => {
     };
   }, []);
   return (
-    <header id="header" class="header d-flex align-items-center fixed-top">
-            <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
-              <div  class="logo d-flex align-items-center">
+    <header id="header" className="header d-flex align-items-center fixed-top">
+            <div className="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+              <div  className="logo d-flex align-items-center">
                 <img src={logo} alt="LOGO" />
-                <h1 class="sitename">S.A.F</h1>
+                <h1 className="sitename">S.A.F</h1>
               </div>
              <ScrollToTop/>
-              <nav id="navmenu" class="navmenu">
+              <nav id="navmenu" className="navmenu">
                 <ul>
                   <li>
                     <Link to="/" className={`${nombreRuta == "inicio" ? "active" : ""}`}>
@@ -88,10 +88,10 @@ useEffect(() => {
                   <li>
                     <Link to="/onda" className={`${nombreRuta == "onda" ? "active" : ""}`}>ONDA</Link>
                   </li>
-                  <li class="dropdown">
+                  <li className="dropdown">
                     <a href="#" className={`${nombreRuta == "programas" || nombreRuta == "streamings" ? "active" : ""}`}>
                       <span>Programas</span>{" "}
-                      <i class="bi bi-chevron-down toggle-dropdown"></i>
+                      <i className="bi bi-chevron-down toggle-dropdown"></i>
                     </a>
                     <ul>
                       <li>
@@ -102,19 +102,19 @@ useEffect(() => {
                       </li>
                     </ul>
                   </li>
-                  <div class="d-none d-lg-flex ms-2 fondoIconoRedes">
-                    <a class="btn-sm-square rounded-circle ms-1 icon-social facebook" href="https://www.facebook.com/soberaniaalimentariaformosena">
-                      <small class="bi bi-facebook"></small>
+                  <div className="d-none d-lg-flex ms-2 fondoIconoRedes">
+                    <a className="btn-sm-square rounded-circle ms-1 icon-social facebook" href="https://www.facebook.com/soberaniaalimentariaformosena">
+                      <small className="bi bi-facebook"></small>
                     </a>
-                    <a class="btn-sm-square rounded-circle ms-3 icon-social instagram" href="https://www.instagram.com/soberaniaalimentariaformosena">
-                      <small class="bi bi-instagram"></small>
+                    <a className="btn-sm-square rounded-circle ms-3 icon-social instagram" href="https://www.instagram.com/soberaniaalimentariaformosena">
+                      <small className="bi bi-instagram"></small>
                     </a>
-                    <a class="btn-sm-square rounded-circle ms-3 icon-social youtube" href="https://www.youtube.com/@SAF_2025">
-                      <small class="bi bi-youtube"></small>
+                    <a className="btn-sm-square rounded-circle ms-3 icon-social youtube" href="https://www.youtube.com/@SAF_2025">
+                      <small className="bi bi-youtube"></small>
                     </a>
                   </div>
                 </ul>
-                <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+                <i className="mobile-nav-toggle d-xl-none bi bi-list"></i>
               </nav>
             </div>
           </header>

@@ -4,21 +4,21 @@ import fondo from "../assets/img/loginfondo.jpg";
 const Portada = ({titulo, subtitulo, tipoFondo}) => {
 
   return (
-    <section id="hero" class="hero section dark-background">
-              <img src={fondo} alt="" class="hero-bg" />
+    <section id="hero" className="hero section dark-background">
+              <img src={fondo} alt="" className="hero-bg" />
     
-              <div class="container">
-                <div class="row gy-4 justify-content-between">
+              <div className="container">
+                <div className="row gy-4 justify-content-between">
                   <div
-                    class="col-lg-5 order-lg-last hero-img"
+                    className="col-lg-5 order-lg-last hero-img"
                     data-aos="zoom-out"
                     data-aos-delay="100"
                   >
-                    <img  class="img-fluid animated" alt="" />
+                    <img  className="img-fluid animated" alt="" />
                   </div>
     
                   <div
-                    class="col-lg-6  d-flex flex-column justify-content-center"
+                    className="col-lg-6  d-flex flex-column justify-content-center"
                     data-aos="fade-in"
                   >
                     <h1>
@@ -27,15 +27,15 @@ const Portada = ({titulo, subtitulo, tipoFondo}) => {
                     <p>
                       {subtitulo}
                     </p>
-                    {/* <div class="d-flex">
-                      <a href="#about" class="btn-get-started">
+                    {/* <div className="d-flex">
+                      <a href="#about" className="btn-get-started">
                         Ver mas
                       </a>
                       <a
                         href=""
-                        class="glightbox btn-watch-video d-flex align-items-center"
+                        className="glightbox btn-watch-video d-flex align-items-center"
                       >
-                        <i class="bi bi-play-circle"></i>
+                        <i className="bi bi-play-circle"></i>
                         <span>Ver Video</span>
                       </a>
                     </div> */}
@@ -44,7 +44,7 @@ const Portada = ({titulo, subtitulo, tipoFondo}) => {
               </div>
     
               {/* <svg
-                class="hero-waves"
+                className="hero-waves"
                 xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink"
                 viewBox="0 24 150 28 "
@@ -56,13 +56,13 @@ const Portada = ({titulo, subtitulo, tipoFondo}) => {
                     d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"
                   ></path>
                 </defs>
-                <g class="wave1">
+                <g className="wave1">
                   <use xlinkHref="#wave-path" x="50" y="3"></use>
                 </g>
-                <g class="wave2">
+                <g className="wave2">
                   <use xlinkHref="#wave-path" x="50" y="0"></use>
                 </g>
-                <g class="wave3">
+                <g className="wave3">
                   <use xlinkHref="#wave-path" x="50" y="9"></use>
                 </g>
               </svg> */}

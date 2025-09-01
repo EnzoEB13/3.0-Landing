@@ -16,9 +16,9 @@ export const mostrarPuntos = () => async dispatch => {
     /* const config = {headers : {"Content-type": "application/json"}} */
   try {
       let res = await axios.get(`${URL}/ver-puntos-publicos`);
-    /*  console.log(res) */
+    
       const body = await res.data
-  /*    console.log(body) */
+  
    
       
       dispatch({
@@ -27,7 +27,7 @@ export const mostrarPuntos = () => async dispatch => {
       })
       
   } catch (err) { 
-      /* console.log(err) */
+      
       dispatch({
           type: ERROR_PUNTO,
           payload: { 

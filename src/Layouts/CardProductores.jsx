@@ -2,13 +2,13 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const CardProductores = ({ productoresData }) => {
-  console.log(productoresData?.length);
+  
   return (
     <div>
       {productoresData?.length > 0 ? (
         <div class="row g-4">
           {productoresData?.map((item) => {
-            console.log(item);
+            
             return (
               <div
                 key="nuevoProductor"

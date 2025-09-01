@@ -18,9 +18,9 @@ export const mostrarProgramas = () => async dispatch => {
     /* const config = {headers : {"Content-type": "application/json"}} */
   try {
       let res = await axios.get(`${URL}/ver-programas-publicados`) 
-     /*  console.log(res) */
+    
       const body = await res.data
-      /* console.log(body) */
+      
       
       dispatch({
           type: MOSTRAR_PROGRAMAS,
@@ -28,7 +28,7 @@ export const mostrarProgramas = () => async dispatch => {
       })
       
   } catch (err) { 
-      console.log(err)
+      
       dispatch({
           type: ERROR_PROGRAMAS,
           payload: { 
@@ -45,9 +45,9 @@ export const mostrarVivo = () => async dispatch => {
     /* const config = {headers : {"Content-type": "application/json"}} */
   try {
       let res = await axios.get(`${URL}/ver-programa-vivo`)
-     /*  console.log(res) */
+
       const body = await res.data
-      /* console.log(body) */
+    
       
       dispatch({
           type: MOSTRAR_PROGRAMA_VIVO,
@@ -55,7 +55,7 @@ export const mostrarVivo = () => async dispatch => {
       })
       
   } catch (err) { 
-      console.log(err)
+      
       dispatch({
           type: ERROR_PROGRAMA_VIVO,
           payload: { 

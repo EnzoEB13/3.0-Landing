@@ -15,9 +15,9 @@ export const mostrarCronograma = () => async dispatch => {
     /* const config = {headers : {"Content-type": "application/json"}} */
   try {
       let res = await axios.get(`${URL}/ver-cronograma`)
-    /*  console.log(res) */
+    
       const body = await res.data
-  /*    console.log(body) */
+  
    
       
       dispatch({
@@ -26,7 +26,7 @@ export const mostrarCronograma = () => async dispatch => {
       })
       
   } catch (err) { 
-      /* console.log(err) */
+     
       dispatch({
           type: ERROR_CRONOGRAMA,
           payload: { 

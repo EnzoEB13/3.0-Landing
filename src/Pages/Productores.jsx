@@ -60,9 +60,9 @@ const Productores = () => {
             <span className="description-title">Los Productores</span>
           </div>
         </div>
-        <div class="container-xxl py-5">
-            <div class="tab-content">
-              <div id="tab-1" class="tab-pane p-0 active">
+        <div className="container-xxl py-5">
+            <div className="tab-content">
+              <div id="tab-1" className="tab-pane p-0 active">
                   <div key={"Productores1"} 
                       data-aos="fade-up"
                       data-aos-delay="100">
@@ -79,7 +79,7 @@ const Productores = () => {
                         <br />
                       </div>
                 </div>
-                <div id="tab-2" class="tab-pane p-0 active">
+                <div id="tab-2" className="tab-pane p-0 active">
                   <div key={"Productores2"} 
                       data-aos="fade-up"
                       data-aos-delay="100">

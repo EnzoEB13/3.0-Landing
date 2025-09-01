@@ -23,9 +23,9 @@ const Noticias_detalles = ({mostrarNoticias, noticia: { noticias }, mostrarProgr
     const cargarNoticia = async () => {
         setLoadingNoticia(true)
         let res = await axios.get(`${URL}/ver-noticia-unica/${tituloNoticia}`)
-         console.log(res)
+         
          const body = await res.data
-         console.log(body)
+         
          setNoticia(body[0])
          setLoadingNoticia(false)
     }
@@ -73,7 +73,7 @@ const Noticias_detalles = ({mostrarNoticias, noticia: { noticias }, mostrarProgr
 
    
 
-   /* console.log(programas) */
+   
    const [programaUnico, setProgramaUnico] = useState()
    useEffect(()=>{
         if(programas?.length > 0){
@@ -107,7 +107,7 @@ const Noticias_detalles = ({mostrarNoticias, noticia: { noticias }, mostrarProgr
 
    /* const [botonEnlaceON, setBotonEnlaceON] = useState(false)
  */
-    /* console.log(noticia?.titulo) */
+    
   
     return (
     <Container>

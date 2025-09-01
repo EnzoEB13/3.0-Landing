@@ -68,7 +68,7 @@ const Home = () => {
   const [imagenActual, setImagenActual] = useState(null);
 
   const abrirModal = (img) => {
-    console.log("entro");
+    
     setImagenActual(img);
     setModalAbierto(true);
   };
@@ -85,21 +85,21 @@ const Home = () => {
     
       <Container>
         {/* <!-- Portada --> */}
-        <section id="hero" class="hero section dark-background">
-          <img src={`/src/assets/img/loginfondo.jpg`} alt="" class="hero-bg" />
+        <section id="hero" className="hero section dark-background">
+          <img src={`/src/assets/img/loginfondo.jpg`} alt="" className="hero-bg" />
 
-          <div class="container">
-            <div class="row gy-4 justify-content-between">
+          <div className="container">
+            <div className="row gy-4 justify-content-between">
               <div
-                class="col-lg-5 order-lg-last hero-img"
+                className="col-lg-5 order-lg-last hero-img"
                 data-aos="zoom-out"
                 data-aos-delay="100"
               >
-                <img src={portada} class="img-fluid animated" alt="" />
+                <img src={portada} className="img-fluid animated" alt="" />
               </div>
 
               <div
-                class="col-lg-6  d-flex flex-column justify-content-center"
+                className="col-lg-6  d-flex flex-column justify-content-center"
                 data-aos="fade-in"
               >
                 <h1>
@@ -109,15 +109,15 @@ const Home = () => {
                   Un programa impulsado por la Subsecretaría de Defensa al
                   Consumidor y Usuarios.
                 </p>
-                <div class="d-flex">
-                  <a href="https://www.facebook.com/soberaniaalimentariaformosena" target="_blank" class="btn-get-started">
+                <div className="d-flex">
+                  <a href="https://www.facebook.com/soberaniaalimentariaformosena" target="_blank" className="btn-get-started">
                     Ver mas
                   </a>
                   {/* <a
                     href="https://www.youtube.com/watch?v=Y7f98aduVJ8"
-                    class="glightbox btn-watch-video d-flex align-items-center"
+                    className="glightbox btn-watch-video d-flex align-items-center"
                   >
-                    <i class="bi bi-play-circle"></i>
+                    <i className="bi bi-play-circle"></i>
                     <span>Ver Video</span>
                   </a> */}
                 </div>
@@ -126,7 +126,7 @@ const Home = () => {
           </div>
 
           <svg
-            class="hero-waves"
+            className="hero-waves"
             xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink"
             viewBox="0 24 150 28 "
@@ -138,13 +138,13 @@ const Home = () => {
                 d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"
               ></path>
             </defs>
-            <g class="wave1">
+            <g className="wave1">
               <use xlinkHref="#wave-path" x="50" y="3"></use>
             </g>
-            <g class="wave2">
+            <g className="wave2">
               <use xlinkHref="#wave-path" x="50" y="0"></use>
             </g>
-            <g class="wave3">
+            <g className="wave3">
               <use xlinkHref="#wave-path" x="50" y="9"></use>
             </g>
           </svg>
@@ -152,10 +152,10 @@ const Home = () => {
         {/* <!-- Fin Portada --> */}
 
         {/* <!-- Centros Fijos Section --> */}
-        <section id="about" class="about section">
-          <div class="container" data-aos="fade-right" data-aos-delay="100">
-            <div class="row align-items-xl-center gy-5">
-              <div class="col-xl-5 content">
+        <section id="about" className="about section">
+          <div className="container" data-aos="fade-right" data-aos-delay="100">
+            <div className="row align-items-xl-center gy-5">
+              <div className="col-xl-5 content">
                 <h3>Puntos De Venta</h3>
                 <h2>Soberanía Alimentaria Formoseña</h2>
                 <p>
@@ -166,17 +166,17 @@ const Home = () => {
                   localidades del interior de la provincia, acercando productos
                   frescos y a precio justo.
                 </p>
-                <Link to={"/puntos"} class="read-more">
+                <Link to={"/puntos"} className="read-more">
                   <span>Ver Puntos</span>
-                  <i class="bi bi-arrow-right"></i>
+                  <i className="bi bi-arrow-right"></i>
                 </Link>
               </div>
 
-              <div class="col-xl-7">
-                <div class="row gy-4 icon-boxes">
-                  <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
-                    <div class="icon-box">
-                      <div class="icon-circle">
+              <div className="col-xl-7">
+                <div className="row gy-4 icon-boxes">
+                  <div className="col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div className="icon-box">
+                      <div className="icon-circle">
                         <img src={FotoCentro12} alt="icono" />
                       </div>
                       <h3>Av. Néstor Kirchner 5595</h3>
@@ -187,9 +187,9 @@ const Home = () => {
                     </div>
                   </div>{" "}
                   {/* <!-- End Icon Box --> */}
-                  <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
-                    <div class="icon-box">
-                      <div class="icon-circle">
+                  <div className="col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div className="icon-box">
+                      <div className="icon-circle">
                         <img src={FotoCentroVilla} alt="icono" />
                       </div>
                       <h3>Av. Frondizi 4205</h3>
@@ -200,9 +200,9 @@ const Home = () => {
                     </div>
                   </div>{" "}
                   {/* <!-- End Icon Box --> */}
-                  <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
-                    <div class="icon-box">
-                      <div class="icon-circle">
+                  <div className="col-md-6" data-aos="fade-up" data-aos-delay="400">
+                    <div className="icon-box">
+                      <div className="icon-circle">
                         <img src={FotoCentroAlta} alt="icono" />
                       </div>
                       <h3>Av. Néstor Kirchner 1855</h3>
@@ -213,9 +213,9 @@ const Home = () => {
                     </div>
                   </div>{" "}
                   {/* <!-- End Icon Box --> */}
-                  <div class="col-md-6" data-aos="fade-up" data-aos-delay="500">
-                    <div class="icon-box">
-                      <div class="icon-circle">
+                  <div className="col-md-6" data-aos="fade-up" data-aos-delay="500">
+                    <div className="icon-box">
+                      <div className="icon-circle">
                         <img src={FotoCentroc5} alt="icono" />
                       </div>
                       <h3>Paula Albarracín 2735</h3>
@@ -234,29 +234,29 @@ const Home = () => {
         {/* <!-- /Centros Fijos Section --> */}
 
         {/*  <!-- Details Section --> */}
-        <section id="details" class="details section">
+        <section id="details" className="details section">
           {/* <!-- Section Title --> */}
-          <div class="container section-title" data-aos="fade-up">
+          <div className="container section-title" data-aos="fade-up">
             <h2>Sobre Nosotros</h2>
             <div>
               <span>TODO SOBRE</span>{" "}
-              <span class="description-title">S.A.F</span>
+              <span className="description-title">S.A.F</span>
             </div>
           </div>
           {/* <!-- End Section Title --> */}
 
-          <div class="container">
-            <div class="row gy-1 align-items-center features-item">
+          <div className="container">
+            <div className="row gy-1 align-items-center features-item">
               <div
-                class="col-md-5 d-flex align-items-center"
+                className="col-md-5 d-flex align-items-center"
                 data-aos="zoom-out"
                 data-aos-delay="100"
               >
-                <img src={fotoFurgon} class="img-fluid" alt="" />
+                <img src={fotoFurgon} className="img-fluid" alt="" />
               </div>
-              <div class="col-md-7" data-aos="fade-up" data-aos-delay="100">
+              <div className="col-md-7" data-aos="fade-up" data-aos-delay="100">
                 <h3>¿Qué es el programa Soberanía Alimentaria Formoseña?</h3>
-                <p class="">
+                <p className="">
                   El <strong>programa Soberanía Alimentaria Formoseña</strong> o
                   por sus siglas <strong>S.A.F </strong>
                   es un programa impulsado por la Subsecretaría de Defensa al
@@ -272,7 +272,7 @@ const Home = () => {
                 </p>
                 <ul>
                   <li>
-                    <i class="bi bi-check"></i>
+                    <i className="bi bi-check"></i>
                     <span>
                       {" "}
                       <strong>
@@ -285,16 +285,16 @@ const Home = () => {
             </div>
             {/* <!-- Features Item --> */}
 
-            <div class="row gy-1 align-items-center features-item">
+            <div className="row gy-1 align-items-center features-item">
               <div
-                class="col-md-5 order-1 order-md-2 d-flex align-items-center"
+                className="col-md-5 order-1 order-md-2 d-flex align-items-center"
                 data-aos="zoom-out"
                 data-aos-delay="200"
               >
-                <img src={fotoDistribuidores} class="img-fluid" alt="" />
+                <img src={fotoDistribuidores} className="img-fluid" alt="" />
               </div>
               <div
-                class="col-md-7 order-2 order-md-1"
+                className="col-md-7 order-2 order-md-1"
                 data-aos="fade-up"
                 data-aos-delay="200"
               >
@@ -313,19 +313,19 @@ const Home = () => {
                   Además, trabajamos en conjunto con importantes distribuidores
                   locales que fortalecen la cadena de valor, como:
                 </p>
-                <div class="icon-container-dis">
-                  <div class="icon-circle-dis">
+                <div className="icon-container-dis">
+                  <div className="icon-circle-dis">
                     <img src={logoNutrifor} alt="icono" />
                   </div>
-                  <div class="icon-circle-dis">
+                  <div className="icon-circle-dis">
                     <img src={logoPanDeCasa} alt="icono" />
                   </div>
-                  <div class="icon-circle-dis">
+                  <div className="icon-circle-dis">
                     <img src={logoRefsaGas} alt="icono" />
                   </div>
                 </div>
 
-                <p class="fst-italic py-4">
+                <p className="fst-italic py-4">
                   <strong>
                     De esta forma, juntos construimos una red sólida de
                     producción y distribución, que siempre prioriza lo local y
@@ -336,14 +336,14 @@ const Home = () => {
             </div>
             {/* <!-- Features Item --> */}
 
-            <div class="row gy-1 align-items-center features-item">
+            <div className="row gy-1 align-items-center features-item">
               <div
-                class="col-md-5 d-flex align-items-center"
+                className="col-md-5 d-flex align-items-center"
                 data-aos="zoom-out"
               >
-                <img src={fotoNTF} class="img-fluid" alt="" />
+                <img src={fotoNTF} className="img-fluid" alt="" />
               </div>
-              <div class="col-md-7" data-aos="fade-up">
+              <div className="col-md-7" data-aos="fade-up">
                 <h3>Comunicación y Comunidad</h3>
                 <p>
                   El programa también tiene un espacio en la televisión local a
@@ -354,7 +354,7 @@ const Home = () => {
                   llevando alimentos frescos y saludables a miles de familias
                   formoseñas.
                 </p>
-                <p class="fst-italic">
+                <p className="fst-italic">
                   <strong>
                     Nuestro compromiso es con la soberanía alimentaria, el
                     desarrollo local y el bienestar de nuestra gente.
@@ -364,14 +364,14 @@ const Home = () => {
             </div>
             {/* <!-- Features Item --> */}
 
-            <div class="row gy-1 align-items-center features-item">
+            <div className="row gy-1 align-items-center features-item">
               <div
-                class="col-md-5 order-1 order-md-2 d-flex align-items-center"
+                className="col-md-5 order-1 order-md-2 d-flex align-items-center"
                 data-aos="zoom-out"
               >
-                <img src={fotoStreaming} class="img-fluid" alt="" />
+                <img src={fotoStreaming} className="img-fluid" alt="" />
               </div>
-              <div class="col-md-7 order-2 order-md-1" data-aos="fade-up">
+              <div className="col-md-7 order-2 order-md-1" data-aos="fade-up">
                 <h3>Streaming Nutricionales</h3>
                 <p>
                   Dentro del marco del programa{" "}
@@ -391,11 +391,11 @@ const Home = () => {
                   relacionadas al programa SAF. Los streamings funcionan como un
                   puente directo entre productores, especialistas en nutrición y
                   consumidores, reforzando el lema
-                  <strong class="fst-italic">
+                  <strong className="fst-italic">
                     “Del productor a tu mesa con un precio justo”
                   </strong>
                   , pero también{" "}
-                  <strong class="fst-italic">
+                  <strong className="fst-italic">
                     “con conocimiento y salud para toda la familia”
                   </strong>
                   .
@@ -514,15 +514,15 @@ const Home = () => {
         {/* <!-- /Testimonials Section --> */}
 
        {/*  <!-- Faq Section --> */}
-    <section id="faq" class="faq section light-background">
+    <section id="faq" className="faq section light-background">
 
-      <div class="container-fluid">
+      <div className="container-fluid">
 
-        <div class="row gy-4">
+        <div className="row gy-4">
 
-          <div class="col-lg-7 d-flex flex-column justify-content-center order-2 order-lg-1">
+          <div className="col-lg-7 d-flex flex-column justify-content-center order-2 order-lg-1">
 
-            <div class="content px-xl-5" data-aos="fade-up" data-aos-delay="100">
+            <div className="content px-xl-5" data-aos="fade-up" data-aos-delay="100">
               <h3><span>Convenio entre la </span><strong>Subsecretaría de Defensa al Consumidor y Usuario y el Banco de Formosa</strong></h3>
               <p>
                 El convenio entre el <strong>Banco Formosa</strong>, a través de su <strong>aplicación ONDA</strong>, 
@@ -535,12 +535,12 @@ const Home = () => {
               </p>
             </div>
 
-            <div class="faq-container px-xl-5" data-aos="fade-up" data-aos-delay="200">
+            <div className="faq-container px-xl-5" data-aos="fade-up" data-aos-delay="200">
 
-              <div class={`faq-item ${preguntaActiva1 ? "faq-active" : ""}`} onClick={()=>setPreguntaActiva1(!preguntaActiva1)}>
-                <i class="faq-icon bi bi-question-circle"></i>
+              <div className={`faq-item ${preguntaActiva1 ? "faq-active" : ""}`} onClick={()=>setPreguntaActiva1(!preguntaActiva1)}>
+                <i className="faq-icon bi bi-question-circle"></i>
                 <h3>Que beneficios tiene para los consumidores finales?</h3>
-                <div class="faq-content" >
+                <div className="faq-content" >
                   <p>
                     A través de la <strong>aplicación ONDA</strong>, 
                     quienes realicen sus compras en los puntos de venta de <strong>Soberanía Alimentaria </strong> 
@@ -554,13 +554,13 @@ const Home = () => {
                   </p>
                   
                 </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
+                <i className="faq-toggle bi bi-chevron-right"></i>
               </div>{/* <!-- End Faq item--> */}
 
-              <div class={`faq-item ${preguntaActiva2 ? "faq-active" : ""}`} onClick={()=>setPreguntaActiva2(!preguntaActiva2)}>
-                <i class="faq-icon bi bi-question-circle"></i>
+              <div className={`faq-item ${preguntaActiva2 ? "faq-active" : ""}`} onClick={()=>setPreguntaActiva2(!preguntaActiva2)}>
+                <i className="faq-icon bi bi-question-circle"></i>
                 <h3>Que beneficios tiene para las pymes que venden con ONDA?</h3>
-                <div class="faq-content">
+                <div className="faq-content">
                   <p>Beneficios para pymes que venden con ONDA:
                     <ul>
                     <li><strong>10% de reintegro</strong> sobre sus ventas.</li>
@@ -570,7 +570,7 @@ const Home = () => {
                   </p>
                   
                 </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
+                <i className="faq-toggle bi bi-chevron-right"></i>
               </div>{/* <!-- End Faq item--> */}
             </div>
           </div>
@@ -634,222 +634,222 @@ const Home = () => {
     </section>{/* <!-- /Faq Section --> */}
 
         {/* <!-- Gallery Section --> */}
-        <section id="gallery" class="gallery section">
+        <section id="gallery" className="gallery section">
           {/* <!-- Section Title --> */}
-          <div class="container section-title" data-aos="fade-up">
+          <div className="container section-title" data-aos="fade-up">
             <h2>S.A.F</h2>
             <div>
               <span>Galeria De </span>{" "}
-              <span class="description-title">Fotos</span>
+              <span className="description-title">Fotos</span>
             </div>
           </div>
           {/* <!-- End Section Title --> */}
 
-          <div class="container" data-aos="fade-up" data-aos-delay="100">
-            <div class="row g-0">
-              <div class="col-lg-3 col-md-4">
-                <div class="gallery-item">
+          <div className="container" data-aos="fade-up" data-aos-delay="100">
+            <div className="row g-0">
+              <div className="col-lg-3 col-md-4">
+                <div className="gallery-item">
                   <div
                     onClick={() => abrirModal(foto1)}
-                    class="glightbox"
+                    className="glightbox"
                     data-gallery="images-gallery"
                   >
-                    <img src={foto1} alt="" class="img-fluid" />
+                    <img src={foto1} alt="" className="img-fluid" />
                   </div>
                 </div>
               </div>
               {/* <!-- End Gallery Item --> */}
 
-              <div class="col-lg-3 col-md-4">
-                <div class="gallery-item">
+              <div className="col-lg-3 col-md-4">
+                <div className="gallery-item">
                   <div
                     onClick={() => abrirModal(foto2)}
-                    class="glightbox"
+                    className="glightbox"
                     data-gallery="images-gallery"
                   >
-                    <img src={foto2} alt="" class="img-fluid" />
+                    <img src={foto2} alt="" className="img-fluid" />
                   </div>
                 </div>
               </div>
               {/* <!-- End Gallery Item --> */}
 
-              <div class="col-lg-3 col-md-4">
-                <div class="gallery-item">
+              <div className="col-lg-3 col-md-4">
+                <div className="gallery-item">
                   <div
                     onClick={() => abrirModal(foto3)}
-                    class="glightbox"
+                    className="glightbox"
                     data-gallery="images-gallery"
                   >
-                    <img src={foto3} alt="" class="img-fluid" />
+                    <img src={foto3} alt="" className="img-fluid" />
                   </div>
                 </div>
               </div>
               {/* <!-- End Gallery Item --> */}
 
-              <div class="col-lg-3 col-md-4">
-                <div class="gallery-item">
+              <div className="col-lg-3 col-md-4">
+                <div className="gallery-item">
                   <div
                     onClick={() => abrirModal(foto4)}
-                    class="glightbox"
+                    className="glightbox"
                     data-gallery="images-gallery"
                   >
-                    <img src={foto4} alt="" class="img-fluid" />
+                    <img src={foto4} alt="" className="img-fluid" />
                   </div>
                 </div>
               </div>
               {/* <!-- End Gallery Item --> */}
 
-              <div class="col-lg-3 col-md-4">
-                <div class="gallery-item">
+              <div className="col-lg-3 col-md-4">
+                <div className="gallery-item">
                   <div
                     onClick={() => abrirModal(foto5)}
-                    class="glightbox"
+                    className="glightbox"
                     data-gallery="images-gallery"
                   >
-                    <img src={foto5} alt="" class="img-fluid" />
+                    <img src={foto5} alt="" className="img-fluid" />
                   </div>
                 </div>
               </div>
               {/* <!-- End Gallery Item --> */}
 
-              <div class="col-lg-3 col-md-4">
-                <div class="gallery-item">
+              <div className="col-lg-3 col-md-4">
+                <div className="gallery-item">
                   <div
                     onClick={() => abrirModal(foto6)}
-                    class="glightbox"
+                    className="glightbox"
                     data-gallery="images-gallery"
                   >
-                    <img src={foto6} alt="" class="img-fluid" />
+                    <img src={foto6} alt="" className="img-fluid" />
                   </div>
                 </div>
               </div>
               {/* <!-- End Gallery Item --> */}
 
-              <div class="col-lg-3 col-md-4">
-                <div class="gallery-item">
+              <div className="col-lg-3 col-md-4">
+                <div className="gallery-item">
                   <div
                     onClick={() => abrirModal(foto7)}
-                    class="glightbox"
+                    className="glightbox"
                     data-gallery="images-gallery"
                   >
-                    <img src={foto7} alt="" class="img-fluid" />
+                    <img src={foto7} alt="" className="img-fluid" />
                   </div>
                 </div>
               </div>
               {/* <!-- End Gallery Item --> */}
 
-              <div class="col-lg-3 col-md-4">
-                <div class="gallery-item">
+              <div className="col-lg-3 col-md-4">
+                <div className="gallery-item">
                   <div
                     onClick={() => abrirModal(foto8)}
-                    class="glightbox"
+                    className="glightbox"
                     data-gallery="images-gallery"
                   >
-                    <img src={foto8} alt="" class="img-fluid" />
+                    <img src={foto8} alt="" className="img-fluid" />
                   </div>
                 </div>
               </div>
               {/* <!-- End Gallery Item --> */}
 
-              <div class="col-lg-3 col-md-4">
-                <div class="gallery-item">
+              <div className="col-lg-3 col-md-4">
+                <div className="gallery-item">
                   <div
                     onClick={() => abrirModal(foto9)}
-                    class="glightbox"
+                    className="glightbox"
                     data-gallery="images-gallery"
                   >
-                    <img src={foto9} alt="" class="img-fluid" />
+                    <img src={foto9} alt="" className="img-fluid" />
                   </div>
                 </div>
               </div>
               {/* <!-- End Gallery Item --> */}
 
-              <div class="col-lg-3 col-md-4">
-                <div class="gallery-item">
+              <div className="col-lg-3 col-md-4">
+                <div className="gallery-item">
                   <div
                     onClick={() => abrirModal(foto10)}
-                    class="glightbox"
+                    className="glightbox"
                     data-gallery="images-gallery"
                   >
-                    <img src={foto10} alt="" class="img-fluid" />
+                    <img src={foto10} alt="" className="img-fluid" />
                   </div>
                 </div>
               </div>
               {/* <!-- End Gallery Item --> */}
 
-              <div class="col-lg-3 col-md-4">
-                <div class="gallery-item">
+              <div className="col-lg-3 col-md-4">
+                <div className="gallery-item">
                   <div
                     onClick={() => abrirModal(foto11)}
-                    class="glightbox"
+                    className="glightbox"
                     data-gallery="images-gallery"
                   >
-                    <img src={foto11} alt="" class="img-fluid" />
+                    <img src={foto11} alt="" className="img-fluid" />
                   </div>
                 </div>
               </div>
               {/* <!-- End Gallery Item --> */}
 
-              <div class="col-lg-3 col-md-4">
-                <div class="gallery-item">
+              <div className="col-lg-3 col-md-4">
+                <div className="gallery-item">
                   <div
                     onClick={() => abrirModal(foto12)}
-                    class="glightbox"
+                    className="glightbox"
                     data-gallery="images-gallery"
                   >
-                    <img src={foto12} alt="" class="img-fluid" />
+                    <img src={foto12} alt="" className="img-fluid" />
                   </div>
                 </div>
               </div>
               {/* <!-- End Gallery Item --> */}
 
-              <div class="col-lg-3 col-md-4">
-                <div class="gallery-item">
+              <div className="col-lg-3 col-md-4">
+                <div className="gallery-item">
                   <div
                     onClick={() => abrirModal(foto13)}
-                    class="glightbox"
+                    className="glightbox"
                     data-gallery="images-gallery"
                   >
-                    <img src={foto13} alt="" class="img-fluid" />
+                    <img src={foto13} alt="" className="img-fluid" />
                   </div>
                 </div>
               </div>
               {/* <!-- End Gallery Item --> */}
 
-              <div class="col-lg-3 col-md-4">
-                <div class="gallery-item">
+              <div className="col-lg-3 col-md-4">
+                <div className="gallery-item">
                   <div
                     onClick={() => abrirModal(foto14)}
-                    class="glightbox"
+                    className="glightbox"
                     data-gallery="images-gallery"
                   >
-                    <img src={foto14} alt="" class="img-fluid" />
+                    <img src={foto14} alt="" className="img-fluid" />
                   </div>
                 </div>
               </div>
               {/* <!-- End Gallery Item --> */}
 
-              <div class="col-lg-3 col-md-4">
-                <div class="gallery-item">
+              <div className="col-lg-3 col-md-4">
+                <div className="gallery-item">
                   <div
                     onClick={() => abrirModal(foto15)}
-                    class="glightbox"
+                    className="glightbox"
                     data-gallery="images-gallery"
                   >
-                    <img src={foto15} alt="" class="img-fluid" />
+                    <img src={foto15} alt="" className="img-fluid" />
                   </div>
                 </div>
               </div>
               {/* <!-- End Gallery Item --> */}
 
-              <div class="col-lg-3 col-md-4">
-                <div class="gallery-item">
+              <div className="col-lg-3 col-md-4">
+                <div className="gallery-item">
                   <div
                     onClick={() => abrirModal(foto16)}
-                    class="glightbox"
+                    className="glightbox"
                     data-gallery="images-gallery"
                   >
-                    <img src={foto16} alt="" class="img-fluid" />
+                    <img src={foto16} alt="" className="img-fluid" />
                   </div>
                 </div>
               </div>

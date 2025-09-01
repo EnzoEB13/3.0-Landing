@@ -73,7 +73,7 @@ const STN = ({mostrarProgramas, programa: { programas, loadingProgramas}}) => {
             <div className="container">
               <div className="row gy-5">
                 {arrayProgramas?.map((item) => {
-                  /* console.log(item) */
+                  
                   const tituloConGuiones = item?.titulo?.replace(/\s+/g, "_") || "";
                   return (
                     <div

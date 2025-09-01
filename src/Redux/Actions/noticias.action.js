@@ -15,9 +15,9 @@ export const mostrarNoticias = () => async dispatch => {
     /* const config = {headers : {"Content-type": "application/json"}} */
   try {
       let res = await axios.get(`${URL}/ver-noticias-publicas`)
-      /* console.log(res) */
+      
       const body = await res.data
-     /*  console.log(body) */
+     
       
       dispatch({
           type: MOSTRAR_NOTICIAS,
@@ -25,7 +25,7 @@ export const mostrarNoticias = () => async dispatch => {
       })
       
   } catch (err) { 
-      console.log(err)
+      
       dispatch({
           type: ERROR_NOTICIA,
           payload: { 

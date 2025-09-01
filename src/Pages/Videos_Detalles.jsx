@@ -23,7 +23,7 @@ const Videos_Detalles = ({mostrarProgramas, programa: { programas, loadingProgra
   const cargarPrograma = async () => {
         setLoadingPrograma(true)
         let res = await axios.get(`${URL}/ver-programa-unico/${tituloPrograma}`)
-        /*  console.log(res.data) */
+ 
          const body = await res.data[0]
          setProgramaObj(body)
          setLoadingPrograma(false)
@@ -59,12 +59,12 @@ const Videos_Detalles = ({mostrarProgramas, programa: { programas, loadingProgra
 
    },[programas])
 
-   console.log(programaObj?.videoLink)
+   
    
    // Extraer el ID del video desde la URL
   const match = programaObj?.videoLink?.match(/(?:v=|embed\/|youtu\.be\/)([A-Za-z0-9_-]{11})/);
   const videoId = match ? match[1] : null;
-   /* console.log(cleanUrl) */
+
 
     // Inicializar AOS una sola vez
      useEffect(() => {
@@ -89,12 +89,12 @@ const Videos_Detalles = ({mostrarProgramas, programa: { programas, loadingProgra
         subtitulo={programaObj?.titulo}
       />
 
-      <div class="container-fluid tm-container-content tm-mt-60">
-        <div class="section-header text-center mx-auto  wow " data-aos="fade-up">
-                <h1 class="display-5 mb-3 textoGenerales py-5" >{programaObj?.titulo}</h1>
+      <div className="container-fluid tm-container-content tm-mt-60">
+        <div className="section-header text-center mx-auto  wow " data-aos="fade-up">
+                <h1 className="display-5 mb-3 textoGenerales py-5" >{programaObj?.titulo}</h1>
             </div>
-        <div class="row tm-mb-90">            
-            <div class="col-xl-8 col-lg-7 col-md-6 col-sm-12" data-aos="fade-up">
+        <div className="row tm-mb-90">            
+            <div className="col-xl-8 col-lg-7 col-md-6 col-sm-12" data-aos="fade-up">
            {/*  <iframe className="frameProgramaUnico" src={programaObj?.videoLink} title="YouTube video player" frameborder="0" allowfullscreen></iframe>  */}
            {videoId ? (
         <YouTube
@@ -115,10 +115,10 @@ const Videos_Detalles = ({mostrarProgramas, programa: { programas, loadingProgra
             </div>
       )}
             </div>
-            <div class="col-xl-4 col-lg-5 col-md-6 col-sm-12">
+            <div className="col-xl-4 col-lg-5 col-md-6 col-sm-12">
                 {programaObj?.tipo == "nf" ?
-                <div class="tm-bg-gray tm-video-details">
-                <p class="mb-4">
+                <div className="tm-bg-gray tm-video-details">
+                <p className="mb-4">
                 <strong>Netamente Formoseño</strong> es un programa de televisión de la Subsecretaría de 
                 Defensa al Consumidor y Usuario, con un enfoque dedicado a proporcionar 
                 información detallada sobre <strong>soberanía alimentaria en la provincia de Formosa, Argentina</strong>. 
@@ -130,14 +130,14 @@ const Videos_Detalles = ({mostrarProgramas, programa: { programas, loadingProgra
                     Seguí conectado con nosotros para conocer 
                     las últimas novedades del programa S.A.F.</i>
                 </p>
-                <div class="text-center mb-5">
-                    <Link to={programaObj?.videoLink} target="_blank" class="btn btn-danger tm-btn-big"><small class="bi bi-youtube text-white"></small> Ver En Youtube</Link>
+                <div className="text-center mb-5">
+                    <Link to={programaObj?.videoLink} target="_blank" className="btn btn-danger tm-btn-big"><small className="bi bi-youtube text-white"></small> Ver En Youtube</Link>
                 </div>                    
                 
                 </div>
             :
-            <div class="tm-bg-gray tm-video-details">
-                <p class="mb-4">
+            <div className="tm-bg-gray tm-video-details">
+                <p className="mb-4">
                {/*  <strong>Netamente Formoseño</strong> es un programa de televisión de la Subsecretaría de 
                 Defensa al Consumidor y Usuario, con un enfoque dedicado a proporcionar 
                 información detallada sobre <strong>soberanía alimentaria en la provincia de Formosa, Argentina</strong>. 
@@ -149,8 +149,8 @@ const Videos_Detalles = ({mostrarProgramas, programa: { programas, loadingProgra
                     Seguí conectado con nosotros para conocer 
                     las últimas novedades del programa S.A.F.</i>
                 </p>
-                <div class="text-center mb-5">
-                    <Link to={programaObj?.videoLink} target="_blank" class="btn btn-danger tm-btn-big"><small class="bi bi-youtube text-white"></small> Ver En Youtube</Link>
+                <div className="text-center mb-5">
+                    <Link to={programaObj?.videoLink} target="_blank" className="btn btn-danger tm-btn-big"><small className="bi bi-youtube text-white"></small> Ver En Youtube</Link>
                 </div>                    
                 
                 </div>
@@ -159,34 +159,34 @@ const Videos_Detalles = ({mostrarProgramas, programa: { programas, loadingProgra
         </div>
         </div>
       {/* Otros Programas */}
-      <div class="container-xxl py-6" data-aos="fade-up">
-        <div class="container">
-            <div class="section-header text-center mx-auto mb-5 wow " data-wow-delay="0.1s" style={{maxWidth: "500px"}}>
-                <h1 class="display-5 mb-3 py-5 textoGenerales">Otros Programas  </h1>
+      <div className="container-xxl py-6" data-aos="fade-up">
+        <div className="container">
+            <div className="section-header text-center mx-auto mb-5 wow " data-wow-delay="0.1s" style={{maxWidth: "500px"}}>
+                <h1 className="display-5 mb-3 py-5 textoGenerales">Otros Programas  </h1>
                 
             </div>
-            <div class="row g-4">
+            <div className="row g-4">
             {
                 otrosProgramas?.length > 0 ?
                 <react.Fragment key={"Programas"}>
                 {
                     otrosProgramas?.map((item)=>{
-                        /* console.log(item) */
+                        
                         return(
-                            <div class="col-lg-4 col-md-6 wow  divContenedorProgramas" data-wow-delay="0.1s" key={item?.uid}>
+                            <div className="col-lg-4 col-md-6 wow  divContenedorProgramas" data-wow-delay="0.1s" key={item?.uid}>
                                     
                                        {/*  <div className="imgMinPrograma">
-                                            <img class="img-fluid miniaturasProgramas" src={item?.miniaturaLink} alt="Portada"/>
+                                            <img className="img-fluid miniaturasProgramas" src={item?.miniaturaLink} alt="Portada"/>
                                         </div> */}
-                                        <div class="position-relative tm-thumbnail-container">
-                                            <img src={item?.miniaturaLink} alt="Miniatura De YT" class="img-fluid tm-catalog-item-img"/>    
-                                            <Link to={`/programa/${item?.uid}`}  class="position-absolute tm-img-overlay">
-                                                <i class="fas fa-play tm-overlay-icon"></i>
+                                        <div className="position-relative tm-thumbnail-container">
+                                            <img src={item?.miniaturaLink} alt="Miniatura De YT" className="img-fluid tm-catalog-item-img"/>    
+                                            <Link to={`/programa/${item?.uid}`}  className="position-absolute tm-img-overlay">
+                                                <i className="fas fa-play tm-overlay-icon"></i>
                                             </Link>
 
 		                                </div>  
-                                        <div class="bg-light p-4 bodyPrograma">
-                                            <a class="d-block h5 lh-base mb-4 tituloPrograma" href={item?.videoLink} target="_blank">{item.titulo}</a>
+                                        <div className="bg-light p-4 bodyPrograma">
+                                            <a className="d-block h5 lh-base mb-4 tituloPrograma" href={item?.videoLink} target="_blank">{item.titulo}</a>
                                             
                                         </div>
                                     

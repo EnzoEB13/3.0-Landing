@@ -13,28 +13,28 @@ const Onda = () => {
           "Convenio entre Soberania Alimentaria Formoseña y el Banco de Formosa"
         }
       />
-      <section id="details" class="details section">
+      <section id="details" className="details section">
                 {/* <!-- Section Title --> */}
-                {/* <div class="container section-title" data-aos="fade-up">
+                {/* <div className="container section-title" data-aos="fade-up">
                   <h2>S.A.F</h2>
                   <div>
                     <span>ONDA y </span>{" "}
-                    <span class="description-title">S.A.F</span>
+                    <span className="description-title">S.A.F</span>
                   </div>
                 </div> */}
                 {/* <!-- End Section Title --> */}
       
-                <div class="container">
-                  <div class="row  align-items-center features-item">
+                <div className="container">
+                  <div className="row  align-items-center features-item">
                                 <div
-                                  class="col-md-5 order-1 order-md-2 d-flex align-items-center"
+                                  className="col-md-5 order-1 order-md-2 d-flex align-items-center"
                                   data-aos="zoom-out"
                                   data-aos-delay="200"
                                 >
-                                  <img src={fotoDetalle2Onda} class="img-fluid" alt="" />
+                                  <img src={fotoDetalle2Onda} className="img-fluid" alt="" />
                                 </div>
                                 <div
-                                  class="col-md-7 order-2 order-md-1"
+                                  className="col-md-7 order-2 order-md-1"
                                   data-aos="fade-up"
                                   data-aos-delay="200"
                                 >
@@ -57,7 +57,7 @@ const Onda = () => {
                                        las pymes formoseñas, tener muchas más herramientas para generar ventas.
                                     </p>
                                   
-                                  <p class="fst-italic py-4">
+                                  <p className="fst-italic py-4">
                                     <strong>
                                       📲 Pagando únicamente con QR a través de la aplicación ONDA, todos ganamos
                                     </strong>
@@ -65,14 +65,14 @@ const Onda = () => {
                                 </div>
                   </div>
 
-                  <div class="row  align-items-center features-item">
+                  <div className="row  align-items-center features-item">
                                 <div
-                                  class="col-md-5 d-flex align-items-center"
+                                  className="col-md-5 d-flex align-items-center"
                                   data-aos="zoom-out"
                                 >
-                                  <img src={fotoDetalleOnda} class="img-fluid" alt="" />
+                                  <img src={fotoDetalleOnda} className="img-fluid" alt="" />
                                 </div>
-                                <div class="col-md-7" data-aos="fade-up">
+                                <div className="col-md-7" data-aos="fade-up">
                                   <h3>Beneficios:</h3>
                                   <p>
                                     Quienes realicen sus compras en los puntos de venta de Soberanía 
@@ -83,7 +83,7 @@ const Onda = () => {
                                     <li>✅ 20% de reintegro en cada compra</li>
                                     <li>✅ Con un tope mensual de $50.000</li>
                                   </ul>
-                                  <p class="fst-italic">
+                                  <p className="fst-italic">
                                     <strong>
                                       De esta manera, cada compra con QR no solo es más práctica y segura, 
                                       sino también más conveniente para los consumidores.
@@ -98,7 +98,7 @@ const Onda = () => {
                                     <li>✅ 10% de reintegro sobre sus ventas</li>
                                     <li>✅ Con un tope mensual de $100.000</li>
                                   </ul>
-                                  <p class="fst-italic">
+                                  <p className="fst-italic">
                                     <strong>
                                       Esto significa más oportunidades para crecer, vender más y consolidar la economía local.
                                     </strong>
@@ -110,14 +110,14 @@ const Onda = () => {
                                 </div>
                   </div>
 
-                  <div class="row gy-4 align-items-center features-item">
+                  <div className="row gy-4 align-items-center features-item">
                                 <div
-                                  class="col-md-5 order-1 order-md-2 d-flex align-items-center"
+                                  className="col-md-5 order-1 order-md-2 d-flex align-items-center"
                                   data-aos="zoom-out"
                                 >
-                                  <img src={fotoDetalle3Onda} class="img-fluid" alt="" />
+                                  <img src={fotoDetalle3Onda} className="img-fluid" alt="" />
                                 </div>
-                                <div class="col-md-7 order-2 order-md-1" data-aos="fade-up">
+                                <div className="col-md-7 order-2 order-md-1" data-aos="fade-up">
                                   <h3>Pymes que ya trabajan con la aplicación <strong>ONDA:</strong></h3>
                                     <p>
                                       Cada vez más empresas locales se suman a la innovación tecnológica y al crecimiento de la economía provincial utilizando la billetera virtual ONDA.
@@ -133,7 +133,7 @@ const Onda = () => {
                                       <p>✅<strong>Molino El Sauzalito:</strong> Harina de maíz común y harina de maíz precocida Doña China.</p>
                                       <p>✅<strong>Pasta Posta:</strong> Ravioles, tallarines, salsas y otros productos caseros.</p>
                                       <p>✅<strong>Dulce Costa:</strong> Mamón (papaya) en almíbar, naranjas en almíbar “COSTA”, miel de abejas “COSTA” y mermelada de frutilla.</p>
-                                    <p class="fst-italic">
+                                    <p className="fst-italic">
                                       Estas pymes locales son un ejemplo del potencial productivo de Formosa. Gracias a <strong>ONDA</strong>, generando beneficios para todos: mayor comodidad y reintegros para quienes compran, y nuevas oportunidades de crecimiento para los emprendedores y productores locales.
                                     </p>
                                 </div>

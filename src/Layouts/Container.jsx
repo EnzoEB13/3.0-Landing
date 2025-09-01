@@ -5,7 +5,7 @@ const Container = ({ children }) => {
   return (
     <div>
         <NavBar/>
-        <main class="main">
+        <main className="main">
             {children}
         </main>
     </div>

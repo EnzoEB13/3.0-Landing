@@ -46,7 +46,7 @@ useEffect(() => {
     });
     return () => cancelAnimationFrame(id);
   }, [productos, loadingProductos]);
- /*  console.log(listaCategorias) */
+
 
   return (
     <Container>
@@ -68,10 +68,10 @@ useEffect(() => {
             <Spinner />
           </div>
         ) : (
-          <div class="container-xxl py-5">
+          <div className="container-xxl py-5">
             {productos?.length > 0 ? (
-              <div class="tab-content">
-                <div id="tab-1" class="tab-pane p-0 active">
+              <div className="tab-content">
+                <div id="tab-1" className="tab-pane p-0 active">
                   {listaCategorias?.map((categoria) => {
                     return (
                       <div key={categoria} 
@@ -85,9 +85,9 @@ useEffect(() => {
                           </i>
                         </h4>
                         <hr ></hr>
-                        <div class="row g-4">
+                        <div className="row g-4">
                           {productos?.map((item) => {
-                            /* console.log(item) */
+                            
                             if (categoria == item?.categoria) {
                               return (
                                 <div

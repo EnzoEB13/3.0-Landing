@@ -53,10 +53,10 @@ const Puntos = ({ mostrarPuntos, punto: { puntos, loadingPuntos } }) => {
             .setLngLat([punto.ubicacion.lon, punto.ubicacion.lat])
             .setPopup(
               new maplibregl.Popup({ offset: 25 }).setHTML(`
-                <div class="popupMapaDIV">
-                  <h5 class="TituloMapah2">${punto.nombre}</h5>
-                  <p class="barrioMapaP">${punto.barrio || ""}</p>
-                  <p class="descripcionMapaP">
+                <div className="popupMapaDIV">
+                  <h5 className="TituloMapah2">${punto.nombre}</h5>
+                  <p className="barrioMapaP">${punto.barrio || ""}</p>
+                  <p className="descripcionMapaP">
                     ${
                       punto.tipo === "PuntoFijo"
                         ? "Únicamente los Jueves y Sábados de 7:30hs a 12:30hs"
@@ -65,7 +65,7 @@ const Puntos = ({ mostrarPuntos, punto: { puntos, loadingPuntos } }) => {
                   </p>
                   ${
                     punto.img && punto.img !== ""
-                      ? `<img src="${punto.img}" alt="Imagen del lugar" class="portadaMapaIMG" />`
+                      ? `<img src="${punto.img}" alt="Imagen del lugar" className="portadaMapaIMG" />`
                       : ""
                   }
                 </div>

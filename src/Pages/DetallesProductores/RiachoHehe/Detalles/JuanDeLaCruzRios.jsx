@@ -46,7 +46,7 @@ const JuanDeLaCruzRios = () => {
   const [imagenActual, setImagenActual] = useState(null);
 
   const abrirModal = (img) => {
-    console.log("entro")
+    
     setImagenActual(img);
     setModalAbierto(true);
   };
