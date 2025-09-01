@@ -1,0 +1,3 @@
+.tm-catalog-item-img { filter: grayscale(0.5);}
+
+.tm-catalog-item-img:hover { filter: grayscale(0);}

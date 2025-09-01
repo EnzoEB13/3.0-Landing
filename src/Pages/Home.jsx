@@ -23,7 +23,15 @@ import firmaOnda from "../assets/img/firmaOnda1.jpg"
 import firmaOnda2 from "../assets/img/firmaOnda2.jpg"
 import firmaOnda3 from "../assets/img/firmaOnda3.jpg"
 import fondoProductores from "../assets/img/fondo.jpeg";
-import IMGmaurohernangomez from "../assets/img/Productores/maurohernangomez.jpg";
+
+
+/* Fotos Riacho */
+import fotojuandelacruzrios from "../assets/img/Productores/juandelacruzrios.jpg"
+import fotomaurohernangomez from "../assets/img/Productores/maurohernangomez.jpg"
+
+/* Fotos Tres Lagunas */
+import fotorufinoMoreira2 from "../assets/img/Productores/rufinoMoreira2.jpg"
+import fotosergiomareco from "../assets/img/Productores/sergiomareco.jpg"
 
 /* Galeria */
 import foto1 from "../assets/img/galeria/foto1.jpg";
@@ -44,6 +52,7 @@ import foto15 from "../assets/img/galeria/foto15.jpg";
 import foto16 from "../assets/img/galeria/foto16.jpg";
 import Footer from "../Layouts/Footer";
 import Container from "../Layouts/Container";
+import { Link } from "react-router-dom";
 /* Fin Galeria */
 const Home = () => {
   useEffect(() => {
@@ -101,16 +110,16 @@ const Home = () => {
                   Consumidor y Usuarios.
                 </p>
                 <div class="d-flex">
-                  <a href="#about" class="btn-get-started">
+                  <a href="https://www.facebook.com/soberaniaalimentariaformosena" target="_blank" class="btn-get-started">
                     Ver mas
                   </a>
-                  <a
+                  {/* <a
                     href="https://www.youtube.com/watch?v=Y7f98aduVJ8"
                     class="glightbox btn-watch-video d-flex align-items-center"
                   >
                     <i class="bi bi-play-circle"></i>
                     <span>Ver Video</span>
-                  </a>
+                  </a> */}
                 </div>
               </div>
             </div>
@@ -157,10 +166,10 @@ const Home = () => {
                   localidades del interior de la provincia, acercando productos
                   frescos y a precio justo.
                 </p>
-                <a href="#" class="read-more">
+                <Link to={"/puntos"} class="read-more">
                   <span>Ver Puntos</span>
                   <i class="bi bi-arrow-right"></i>
-                </a>
+                </Link>
               </div>
 
               <div class="col-xl-7">
@@ -418,7 +427,7 @@ const Home = () => {
               <SwiperSlide>
                 <div className="testimonial-item">
                   <img
-                    src={IMGmaurohernangomez}
+                    src={fotomaurohernangomez}
                     className="testimonial-img"
                     alt=""
                   />
@@ -428,7 +437,8 @@ const Home = () => {
                     <i className="bi bi-quote quote-icon-left"></i>
                     <span>
                      En la localidad de Colonia San Isidro, Riacho He Hé, Mauro Hernán Gómez trabaja 
-                     junto a su grupo familiar de 2 integrantes en la producción de alimentos frescos y de calidad...
+                     junto a su grupo familiar de 2 integrantes en la producción de alimentos 
+                     frescos y de calidad...
                     </span>
                     <i className="bi bi-quote quote-icon-right"></i>
                   </p>
@@ -438,18 +448,60 @@ const Home = () => {
               <SwiperSlide>
                 <div className="testimonial-item">
                   <img
-                    src={IMGmaurohernangomez}
+                    src={fotorufinoMoreira2}
                     className="testimonial-img"
                     alt=""
                   />
-                  <h3>Mauro Hernan Gomez</h3>
+                  <h3>Rufino Moreira</h3>
                   <h4>PRODUCTOR</h4>
                   <p>
                     <i className="bi bi-quote quote-icon-left"></i>
                     <span>
-                      En la localidad de Colonia San Isidro, Riacho He Hé, Mauro Hernán Gómez 
-                      trabaja junto a su grupo familiar de 2 integrantes en la producción de 
-                      alimentos frescos y de calidad...
+                      En el marco del programa Soberanía Alimentaria Formoseña, 
+                      destacamos el trabajo de Rufino Moreira, un productor de la localidad de
+                       Loma Zapatú, Tres Lagunas...
+                    </span>
+                    <i className="bi bi-quote quote-icon-right"></i>
+                  </p>
+                </div>
+              </SwiperSlide>
+
+              <SwiperSlide>
+                <div className="testimonial-item">
+                  <img
+                    src={fotojuandelacruzrios}
+                    className="testimonial-img"
+                    alt=""
+                  />
+                  <h3>Juan de la Cruz Ríos</h3>
+                  <h4>PRODUCTOR</h4>
+                  <p>
+                    <i className="bi bi-quote quote-icon-left"></i>
+                    <span>
+                      En el B° La Esperanza, Riacho He Hé, Juan de la Cruz Ríos y Julio Gómez llevan 
+                      adelante un valioso trabajo de producción agroecológica en sus 2 hectáreas de
+                       cultivo...
+                    </span>
+                    <i className="bi bi-quote quote-icon-right"></i>
+                  </p>
+                </div>
+              </SwiperSlide>
+
+              <SwiperSlide>
+                <div className="testimonial-item">
+                  <img
+                    src={fotosergiomareco}
+                    className="testimonial-img"
+                    alt=""
+                  />
+                  <h3>Sergio Mareco</h3>
+                  <h4>PRODUCTOR</h4>
+                  <p>
+                    <i className="bi bi-quote quote-icon-left"></i>
+                    <span>
+                      En la localidad de Cachaza, Tres Lagunas, Sergio Rolando Mareco y su 
+                      grupo familiar de 4 personas trabajan con esfuerzo y dedicación en el 
+                      cultivo de alimentos frescos y saludables...
                     </span>
                     <i className="bi bi-quote quote-icon-right"></i>
                   </p>

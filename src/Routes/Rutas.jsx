@@ -8,6 +8,11 @@ import Productos from '../Pages/Productos';
 import Puntos from '../Pages/Puntos';
 import STN from '../Pages/STN';
 import Noticias_detalles from '../Pages/Noticias_detalles';
+import JuanDeLaCruzRios from '../Pages/DetallesProductores/RiachoHehe/Detalles/JuanDeLaCruzRios';
+import MauroHernanGomez from '../Pages/DetallesProductores/RiachoHehe/Detalles/MauroHernanGomez';
+import RufinoMoreira from '../Pages/DetallesProductores/TresLaguna/Detalles/RufinoMoreira';
+import SergioMareco from '../Pages/DetallesProductores/TresLaguna/Detalles/SergioMareco';
+import Videos_Detalles from '../Pages/Videos_Detalles';
 
 export default function Rutas() {
 
@@ -22,6 +27,14 @@ export default function Rutas() {
             <Route path={"/productos"} exact element={<Productos/>}/>
             <Route path={"/puntos"} exact element={<Puntos/>}/>
             <Route path={"/streamings"} exact element={<STN/>}/>
+            <Route path={"/video/:tituloPrograma"} exact element={<Videos_Detalles/>}/>
+
+            {/* Productores */}
+            <Route path={"/productor-1"} exact element={<JuanDeLaCruzRios/>}/>
+            <Route path={"/productor-2"} exact element={<MauroHernanGomez/>}/>
+
+            <Route path={"/productor-3"} exact element={<RufinoMoreira/>}/>
+            <Route path={"/productor-4"} exact element={<SergioMareco/>}/>
       </Routes>
 
   )

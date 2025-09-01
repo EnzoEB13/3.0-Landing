@@ -1,0 +1,26 @@
+.tm-video-details {
+    height: 100%;
+    padding: 40px;
+}
+
+.tm-bg-gray { background-color: #EEEEEE; border-radius: 15px;}
+
+.tm-btn-big { padding: 12px 90px 14px; }
+
+/* .react-player{
+    border-radius: 15px;
+} */
+
+
+@media (max-width: 991px) {
+    .tm-container-content { max-width: 870px; }
+}
+
+@media (max-width: 575px) {
+    .tm-container-content { max-width: 420px; }
+
+}
+
+@media (max-width: 400px) {
+    .tm-btn-big { padding: 12px 50px 14px; }
+}

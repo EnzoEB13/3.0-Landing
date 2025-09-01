@@ -54,6 +54,44 @@
   object-fit: cover;    /* hace que la imagen llene el círculo sin deformarse */
 }
 
+/* LOGO REDES NAVBAR */
+/* Tamaño y estilo base */
+.fondoIconoRedes .icon-social {
+  --sizeLogo: 30px;                 /* Cambiá el tamaño acá */
+  width: var(--sizeLogo);
+  height: var(--sizeLogo);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: transform .2s ease, background .2s ease, color .2s ease, border-color .2s;
+}
+
+/* Tamaño del ícono */
+.fondoIconoRedes .icon-social small {
+  font-size: 1.15rem;           /* agrandá/reducí el ícono */
+  line-height: 1;
+}
+
+
+
+/* Hover: invertir (fondo de marca, ícono blanco) */
+.fondoIconoRedes .facebook:hover  { background: #1877F2; border-color: #1877F2; }
+.fondoIconoRedes .instagram:hover { background: #E1306C; border-color: #E1306C; }
+.fondoIconoRedes .youtube:hover   { background: #FF0000; border-color: #FF0000; }
+.fondoIconoRedes .icon-social:hover small { color: #fff; transform: translateZ(0); }
+
+/* Feedback visual */
+.fondoIconoRedes .icon-social:hover { transform: translateY(-2px); }
+
+/* Variante: tamaño responsivo */
+@media (max-width: 992px) {
+  .fondoIconoRedes .icon-social { --size: 36px; }
+  .fondoIconoRedes .icon-social small { font-size: 1rem; }
+}
+
+
 /* LOGO DE DISTRIBUIDORES */
 .icon-container-dis {
   display: flex;
@@ -1260,7 +1298,7 @@ section,
 }
 
 .details .features-item+.features-item {
-  margin-top: 100px;
+  margin-top: 10px;
 }
 
 @media (max-width: 640px) {

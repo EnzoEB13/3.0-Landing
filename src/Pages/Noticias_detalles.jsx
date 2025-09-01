@@ -90,10 +90,9 @@ const Noticias_detalles = ({mostrarNoticias, noticia: { noticias }, mostrarProgr
    
    
 
-   const copiarEnlace = (valor) => {
+   /* const copiarEnlace = (valor) => {
     let link = window.location.href
     let text = navigator.clipboard.writeText(link)
-    /* console.log(text) */
     toast.promise(
         text,
          {
@@ -102,13 +101,12 @@ const Noticias_detalles = ({mostrarNoticias, noticia: { noticias }, mostrarProgr
            error: <b>Error Al Copiar El Enlace.</b>,
          }
        );
-         /* console.log(toast) */
          setBotonEnlaceON(valor)
        
-   }
+   } */
 
-   const [botonEnlaceON, setBotonEnlaceON] = useState(false)
-
+   /* const [botonEnlaceON, setBotonEnlaceON] = useState(false)
+ */
     /* console.log(noticia?.titulo) */
   
     return (
@@ -133,7 +131,7 @@ const Noticias_detalles = ({mostrarNoticias, noticia: { noticias }, mostrarProgr
                                     {descripcionNoticia}
                                 </div>
                                 
-                                <div align="center">
+                                {/* <div align="center">
                                     {
                                         botonEnlaceON == false ?
                                         <button className="btn btn-info btnCopiarEnlaceInfo my-5" onClick={() => copiarEnlace("link", true)}
@@ -146,7 +144,7 @@ const Noticias_detalles = ({mostrarNoticias, noticia: { noticias }, mostrarProgr
                                         Enlace Copiado
                                         </button>
                                     }
-                                </div>
+                                </div> */}
                             </div>
                         </div>
                     </div>
@@ -235,7 +233,7 @@ const Noticias_detalles = ({mostrarNoticias, noticia: { noticias }, mostrarProgr
                         </div>
                        
                         <div className="d-flex mb-3">
-                            <a href="https://www.youtube.com/@soberaniaalimentariafsa" className="redYoutube d-block w-50 py-2 px-3 text-white text-decoration-none mr-2 mx-1" >
+                            <a href="https://www.youtube.com/@SAF_2025" className="redYoutube d-block w-50 py-2 px-3 text-white text-decoration-none mr-2 mx-1" >
                                 <small className="bi bi-youtube mr-2"></small><small> Youtube</small>
                             </a>
                             

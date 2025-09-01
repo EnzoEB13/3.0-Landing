@@ -1,0 +1,364 @@
+
+  .dark-background-Productores {
+    --background-color: #040b14;
+  }
+  
+
+/*--------------------------------------------------------------
+# Global Header
+--------------------------------------------------------------*/
+.header-Detalles-Productor {
+    color:#272829;
+    background: rgb(0,127,243);
+    background: radial-gradient(circle, rgba(0,127,243,1) 0%, rgba(51,122,253,1) 46%, rgba(53,207,238,1) 100%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    padding: 0 15px;
+    width: 300px;
+    transition: all ease-in-out 0.3s;
+    overflow-y: auto;
+    z-index: 5;
+    border-right: 1px solid color-mix(in srgb, #ffffff, transparent 90%);
+  }
+  
+  .header-Detalles-Productor .profile-img-detalles-productores img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 8px solid rgba(255, 255, 255, 0.15);
+    display: block;
+    margin: 15px auto;
+  }
+  
+  .header-Detalles-Productor .logo-detalles-productores {
+    line-height: 1;
+    margin-bottom: 15px;
+  }
+  
+  .header-Detalles-Productor .logo-detalles-productores img {
+    max-height: 32px;
+    margin-right: 8px;
+  }
+  
+  .header-Detalles-Productor .logo-detalles-productores h1 {
+    font-size: 24px;
+    margin: 0;
+    font-weight: 700;
+    color: #ffffff;
+    
+  }
+  
+
+  
+  @media (min-width: 1200px) {
+  
+    .header-Detalles-Productor~main,
+    .header-Detalles-Productor~#footer {
+      margin-left: 300px;
+    }
+  }
+  
+  @media (max-width: 1199px) {
+    .header-Detalles-Productor {
+      left: -100%;
+    }
+  }
+  
+  .header-Detalles-Productor.header-show {
+    left: 0;
+  }
+  
+  .header-Detalles-Productor .header-toggle {
+    color: #ffffff;
+    background-color: #149ddd;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 2;
+    transition: background-color 0.3s;
+  }
+  
+  .header-Detalles-Productor .header-toggle:hover {
+    color: #ffffff;
+    background-color: color-mix(in srgb, #149ddd 90%, white 15%);
+  }
+
+  /*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+.mobile-nav-toggle {
+    display: none;
+  }
+  
+  .navmenu-detalles-productores {
+    padding: 0;
+    z-index: 9997;
+  }
+  
+  .navmenu-detalles-productores ul {
+    list-style: none;
+    padding: 0 0 20px 0;
+    margin: 0;
+  }
+  
+  .navmenu-detalles-productores a,
+  .navmenu-detalles-productores a:focus {
+    color: white;
+    padding: 15px 10px;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 100;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    transition: 0.3s;
+    width: 100%;
+  }
+  
+  .navmenu-detalles-productores a .navicon,
+  .navmenu-detalles-productores a:focus .navicon {
+    font-size: 20px;
+    margin-right: 10px;
+  }
+  
+  .navmenu-detalles-productores a:hover,
+  .navmenu-detalles-productores .active,
+  .navmenu-detalles-productores .active:focus {
+    color: wheat;
+    font-weight: bold;
+  }
+  
+  .navmenu-detalles-productores a:hover .navicon,
+  .navmenu-detalles-productores .active .navicon,
+  .navmenu-detalles-productores .active:focus .navicon {
+    color: wheat;
+    font-weight: bold;
+  }
+
+
+/*--------------------------------------------------------------
+# Global Sections
+--------------------------------------------------------------*/
+section,
+.section-detalles-productores {
+  color: #ffffff;
+  background-color: #f3f4f6;
+  padding: 20px 20px;
+  font-family: 'Segoe UI', sans-serif;
+  color: #1f2937;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: clip;
+}
+
+
+.titulo-seccion-Detalles {
+  font-size: 2rem;
+  font-weight: 700;
+  position: relative;
+  margin-bottom: 30px;
+  
+}
+
+.titulo-seccion-Detalles::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 3px;
+  background-color: #06b6d4;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+.tarjeta-productor-Detalles {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 800px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.tarjeta-productor-Detalles h3 {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+}
+
+.destacado-Detalles {
+  color: #06b6d4;
+  font-weight: 600;
+}
+
+.tarjeta-productor-Detalles p {
+  margin-bottom: 16px;
+  line-height: 1.6;
+}
+
+.cta-Detalles {
+  background-color: #06b6d4;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+
+/*   *--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+.hero-detallles-productores {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  padding: 80px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-detallles-productores img {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.hero-detallles-productores:before {
+  content: "";
+  background: color-mix(in srgb, var(--background-color), transparent 70%);
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+}
+
+.hero-detallles-productores .container {
+  position: relative;
+  z-index: 3;
+}
+
+.hero-detallles-productores h2 {
+  color: #ffffff;
+  margin: 0;
+  font-size: 64px;
+  text-shadow: 10px 10px 15px rgba(0,0,0,0.6);
+   font-weight: 700;
+}
+
+.hero-detallles-productores p {
+  margin: 5px 0 0 0;
+  font-size: 30px;
+  font-weight: 700;
+  text-shadow: 7px 7px 10px rgba(0,0,0,0.6);
+}
+
+.hero-detallles-productores p span {
+  letter-spacing: 1px;
+  border-bottom: 2px solid rgb(54, 240, 247);
+}
+
+@media (max-width: 768px) {
+  .hero-detallles-productores h2 {
+    font-size: 32px;
+  }
+
+  .hero-detallles-productores p {
+    font-size: 20px;
+  }
+}
+
+
+  
+/* PORTAFOLIO */
+
+.img-fluid{
+  border-radius: 27px;
+}
+  
+  .portfolio-detalles-productores .portfolio-content-detalles-productores {
+    position: relative;
+    overflow: hidden;
+    border-radius: 27px;
+  }
+  
+  .portfolio-detalles-productores .portfolio-content-detalles-productores img {
+    transition: 0.3s;
+    border-radius: 27px;
+  }
+  
+  .portfolio-detalles-productores .portfolio-content-detalles-productores .portfolio-info-detalles-productores {
+    opacity: 0;
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+    transition: all ease-in-out 0.3s;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 15px;
+    border-radius: 27px;
+  }
+  
+  .portfolio-detalles-productores .portfolio-content-detalles-productores .portfolio-info-detalles-productores h4 {
+    font-size: 14px;
+    padding: 5px 10px;
+    font-weight: 400;
+    color: #ffffff ;
+    display: inline-block;
+    background-color: rgb(7, 175, 187);
+  }
+  
+  .portfolio-detalles-productores .portfolio-content-detalles-productores .portfolio-info-detalles-productores p {
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+    display: inline-block;
+    left: 0;
+    right: 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.8);
+  }
+  
+  .portfolio-detalles-productores .portfolio-content-detalles-productores .portfolio-info-detalles-productores .preview-link-detalles-productores,
+  .portfolio-detalles-productores .portfolio-content-detalles-productores .portfolio-info-detalles-productores .details-link-detalles-productores {
+    position: absolute;
+    left: calc(50% - 20px);
+    font-size: 26px;
+    top: calc(50% - 14px);
+    color: #fff;
+    transition: 0.3s;
+    line-height: 1.2;
+  }
+  
+  .portfolio-detalles-productores .portfolio-content-detalles-productores .portfolio-info-detalles-productores .preview-link-detalles-productores:hover,
+  .portfolio-detalles-productores .portfolio-content-detalles-productores .portfolio-info-detalles-productores .details-link-detalles-productores:hover {
+    color: cyan;
+  }
+  
+  .portfolio-detalles-productores .portfolio-content-detalles-productores .portfolio-info-detalles-productores .details-link {
+    left: 50%;
+    font-size: 34px;
+    line-height: 0;
+  }
+  
+  .portfolio-detalles-productores .portfolio-content-detalles-productores:hover .portfolio-info-detalles-productores {
+    opacity: 1;
+  }
+  
+  .portfolio-detalles-productores .portfolio-content-detalles-productores:hover img {
+    transform: scale(1.1);
+  }

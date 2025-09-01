@@ -2,7 +2,11 @@ import React, { useEffect, useState } from 'react'
 import logo from "../assets/img/favicon2.png"
 import { Link } from 'react-router-dom'
 import { useLocation } from 'react-router-dom';
+import { ScrollToTop } from '../Helpers/reiniciarScroll';
 const NavBar = () => {
+
+  
+
   /* class={`${location.pathname = "" ? "active" : ""}`} */
   const [nombreRuta, setNombreRuta] = useState("")
   useEffect(()=>{
@@ -61,7 +65,7 @@ useEffect(() => {
                 <img src={logo} alt="LOGO" />
                 <h1 class="sitename">S.A.F</h1>
               </div>
-    
+             <ScrollToTop/>
               <nav id="navmenu" class="navmenu">
                 <ul>
                   <li>
@@ -98,24 +102,15 @@ useEffect(() => {
                       </li>
                     </ul>
                   </li>
-                  <div class="d-none d-lg-flex ms-2">
-                    <a
-                      class="btn-sm-square bg-white rounded-circle ms-1 "
-                      href="https://www.facebook.com/Programasoberaniaalimentaria"
-                    >
-                      <small class="bi bi-facebook text-body"></small>
+                  <div class="d-none d-lg-flex ms-2 fondoIconoRedes">
+                    <a class="btn-sm-square rounded-circle ms-1 icon-social facebook" href="https://www.facebook.com/soberaniaalimentariaformosena">
+                      <small class="bi bi-facebook"></small>
                     </a>
-                    <a
-                      class="btn-sm-square bg-white rounded-circle ms-3"
-                      href="https://www.instagram.com/soberaniaalimentariaformosena"
-                    >
-                      <small class="bi bi-instagram text-body"></small>
+                    <a class="btn-sm-square rounded-circle ms-3 icon-social instagram" href="https://www.instagram.com/soberaniaalimentariaformosena">
+                      <small class="bi bi-instagram"></small>
                     </a>
-                    <a
-                      class="btn-sm-square bg-white rounded-circle ms-3"
-                      href="https://www.youtube.com/@soberaniaalimentariafsa"
-                    >
-                      <small class="bi bi-youtube text-body"></small>
+                    <a class="btn-sm-square rounded-circle ms-3 icon-social youtube" href="https://www.youtube.com/@SAF_2025">
+                      <small class="bi bi-youtube"></small>
                     </a>
                   </div>
                 </ul>
